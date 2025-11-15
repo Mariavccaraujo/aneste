@@ -94,8 +94,7 @@
   --accent5: #6BC06B;
 }
 
-
-
+/* Título principal */
 h2 {
   color: #334;
   font-size: 2.4em;
@@ -105,6 +104,7 @@ h2 {
   letter-spacing: 0.5px;
 }
 
+/* Container do acordeão */
 .accordion {
   display: flex;
   gap: var(--gap);
@@ -152,25 +152,28 @@ summary {
   transition: opacity var(--transition), background var(--transition);
   user-select: none;
   letter-spacing: 0.4px;
-  min-height: 140px; /* mesma altura do acordeão */
-  width: 30px; /* largura fixa */
+  min-height: 140px;
+  width: 30px;
   box-sizing: border-box;
 }
 
+summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Cores das abas */
 details:nth-child(1) summary { background: var(--accent1); }
 details:nth-child(2) summary { background: var(--accent2); }
 details:nth-child(3) summary { background: var(--accent3); }
 details:nth-child(4) summary { background: var(--accent4); }
 details:nth-child(5) summary { background: var(--accent5); }
 
-summary::-webkit-details-marker { display: none; }
-
 details[open] summary {
   pointer-events: none;
   opacity: 0.2;
 }
 
-/* Conteúdo interno */
+/* Conteúdo */
 .content {
   position: absolute;
   inset: 0;
@@ -203,29 +206,14 @@ details[open] .content {
   position: initial;
 }
 
-.content h3 {
-  margin-top: 0;
-  font-size: 1.8rem;
-  color: var(--accent1);
-  margin-bottom: 12px;
-}
+/* Cores dos títulos dentro do conteúdo */
+details:nth-child(1) .content h3 { color: var(--accent1); }
+details:nth-child(2) .content h3 { color: var(--accent2); }
+details:nth-child(3) .content h3 { color: var(--accent3); }
+details:nth-child(4) .content h3 { color: var(--accent4); }
+details:nth-child(5) .content h3 { color: var(--accent5); }
 
-.content ul {
-  color: #444;
-  line-height: 1.8;
-  font-size: 1.15rem;
-  max-width: 700px;
-  list-style: disc;
-  margin-left: 24px;
-}
-
-.content ul ul {
-  list-style: circle;
-  margin-left: 22px;
-  margin-top: 6px;
-}
-
-/* Responsividade */
+/* Responsividade — summary fica horizontal */
 @media (max-width: 600px) {
   .accordion {
     flex-direction: column;
@@ -240,17 +228,16 @@ details[open] .content {
     writing-mode: horizontal-tb;
     text-orientation: initial;
     padding: 14px;
+    min-height: auto;
+    width: 100%;
   }
 
   .content {
     max-height: none;
     overflow-y: visible;
   }
-}details:nth-child(1) .content h3 { color: var(--accent1); }
-details:nth-child(2) .content h3 { color: var(--accent2); }
-details:nth-child(3) .content h3 { color: var(--accent3); }
-details:nth-child(4) .content h3 { color: var(--accent4); }
-details:nth-child(5) .content h3 { color: var(--accent5); }
+}
+
 :root {
 
   /**
