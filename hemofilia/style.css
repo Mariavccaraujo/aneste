@@ -1,5 +1,46 @@
 /* --- Estilos Básicos Aprimorados --- */
 
+@media (max-width: 920px) {
+    .container-interacoes {
+        padding: 20px 16px;
+    }
+
+    .topo-interacoes {
+        flex-direction: column;
+    }
+
+    .resumo-rapido {
+        width: 100%;        /* ocupa toda a largura */
+        max-width: 100%;    /* não limita demais */
+        min-width: 0;       /* deixa encolher junto com o container */
+        margin: 10px 0;     /* só margem vertical */
+        font-size: 15px;    /* levemente menor em telas médias */
+    }
+
+    .grid-interacoes {
+        grid-template-columns: 1fr;
+    }
+
+    .bloco-extra {
+        grid-template-columns: 1fr;
+    }
+
+    .card-interacao,
+    .card-extra {
+        margin: 10px 0;
+    }
+}
+@media (max-width: 500px) {
+    .resumo-rapido {
+        font-size: 14px;
+        padding: 10px 12px;
+        border-radius: 10px;
+    }
+
+    .resumo-rapido strong {
+        font-size: 0.8rem;
+    }
+}
 
 /* ------------------ RESET SIMPLES ------------------ */
 *,
