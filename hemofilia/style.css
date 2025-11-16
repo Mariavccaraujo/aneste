@@ -1,6 +1,255 @@
-/*-----------------------------------*\
-  #style.css
-\*-----------------------------------*/
+.topo-interacoes{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:18px;
+  margin-bottom:22px;
+}
+
+.titulo-bloco{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+
+.etiqueta{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:6px 12px;
+  border-radius:999px;
+  background:#e0e7ff;
+  font-size:0.8rem;
+  font-weight:600;
+  letter-spacing:0.04em;
+  text-transform:uppercase;
+  color:#4338ca;
+}
+
+.bolinha{
+  width:8px;
+  height:8px;
+  border-radius:999px;
+  background:#4f46e5;
+}
+
+.titulo-bloco h2{
+  margin:0;
+  font-size:1.5rem;
+}
+
+.titulo-bloco p{
+  margin:0;
+  font-size:1rem;
+  color:#475569;
+}
+
+.resumo-rapido{
+  min-width:230px;
+  padding:12px 14px;
+  border-radius:14px;
+  background:#eef2ff;
+  font-size: 16PX;
+  color:#549cc1;;
+  line-height:1.5;
+  margin: 30px;
+}
+
+.resumo-rapido strong{
+  font-size:0.85rem;
+  text-transform:uppercase;
+  letter-spacing:0.06em;
+  display:block;
+  margin-bottom:4px;
+}
+
+.grid-interacoes{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap:16px;
+  margin-bottom:18px;
+}
+
+.card-interacao{
+  background:#ffffff;
+  border-radius:16px;
+  padding:16px 16px 14px;
+  box-shadow:0 5px 18px rgba(15,23,42,0.06);
+  border:1px solid #e2e8f0;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+    margin: 30px;
+
+}
+
+.cabecalho-card{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+}
+
+.titulo-card{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.tag-tipo{
+  width:36px;
+  height:36px;
+  border-radius:999px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:0.95rem;
+  font-weight:700;
+  background:#eef2ff;
+  color:#549cc1;;
+  flex-shrink:0;
+}
+
+.titulo-card h3{
+  margin:0;
+  font-size:25PX;
+  color:#549cc1;
+}
+
+.chip{
+  padding:4px 10px;
+  border-radius:999px;
+  font-size:0.8rem;
+  text-transform:uppercase;
+  letter-spacing:0.08em;
+  background:#ecfeff;
+  color:#155e75;
+  border:1px solid #a5f3fc;
+  white-space:nowrap;
+}
+
+.card-interacao p{
+  margin:0;
+  font-size:20PX;
+  color:#4b5563;
+  line-height:1.55;
+  padding: 10PX;
+}
+
+.destaque-frase{
+  font-size: 16PX;
+  padding:8px 10px;
+  border-radius:12px;
+  background:#f9fafb;
+  color:#1f2933;
+  border:1px dashed #e5e7eb;
+}
+
+.rodape-monitoramento{
+  margin-top:4px;
+  padding:14px 16px;
+  border-radius:16px;
+  background:#0f172a;
+  color:#e5e7eb;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+.rodape-monitoramento strong{
+  font-size:0.9rem;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:#a5b4fc;
+}
+
+.rodape-monitoramento p{
+  margin:0;
+  font-size:1rem;
+  line-height:1.5;
+}
+
+.lista-monitor{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:6px;
+}
+
+.item-monitor{
+  font-size:0.9rem;
+  padding:5px 10px;
+  border-radius:999px;
+  background:rgba(129,140,248,0.1);
+  border:1px solid rgba(129,140,248,0.4);
+}
+
+.bloco-extra{
+  margin-top:18px;
+  display:grid;
+  grid-template-columns: minmax(0,1.4fr) minmax(0,1fr);
+  gap:16px;
+}
+
+.card-extra{
+  background:#ffffff;
+  border-radius:16px;
+  padding:16px;
+  box-shadow:0 5px 18px rgba(15,23,42,0.06);
+  border:1px solid #e2e8f0;
+    margin: 30px;
+
+}
+
+.card-extra h3{
+  margin:0 0 8px 0;
+  font-size: 16PX;
+}
+
+.card-extra p{
+  margin:0;
+  font-size:1rem;
+  color:#4b5563;
+  line-height:1.6;
+}
+
+.subtitulo-extra{
+  font-size:0.85rem;
+  text-transform:uppercase;
+  letter-spacing:0.08em;
+  color:#549cc1;;
+  margin-bottom:6px;
+  font-weight:600;
+}
+
+.lista-passos{
+  margin-top:8px;
+  padding-left:18px;
+  font-size: 16px;
+  color:#374151;
+}
+
+.lista-passos li{
+  margin-bottom:4px;
+}
+
+@media (max-width:920px){
+  .container-interacoes{
+    padding:20px 16px;
+  }
+  .topo-interacoes{
+    flex-direction:column;
+  }
+  .grid-interacoes{
+    grid-template-columns:1fr;
+  }
+  .resumo-rapido{
+    width:100%;
+  }
+  .bloco-extra{
+    grid-template-columns:1fr;
+  }
+}
 
 /**
  * copyright 2022 codewithsadee
