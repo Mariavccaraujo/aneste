@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Flashcards de Farmacologia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --card-bg: #ffffff;
+      --primary: #4a90e2;
+      --primary-soft: rgba(74,144,226,0.12);
+      --accent: #00b39f;
+      --danger: #e85a4f;
+      --text: #222;
+      --muted: #666;
+      --radius: 18px;
+      --shadow: 0 14px 40px rgba(15, 23, 42, 0.18);
+      --transition: 0.4s cubic-bezier(.25,.9,.25,1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #e6f0ff 0, #f5f7fb 40%, #fdfdfd 100%);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+
+    .app {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: clamp(1.6rem, 4vw, 2.1rem);
+      margin-bottom: 6px;
+      color: #111827;
+    }
+
+    .subtitle {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 20px;
+      padding: 0 8px;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--primary-soft);
+      color: var(--primary);
+      font-size: 0.78rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+    }
+
+    .chip-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--primary);
+    }
+
+    .card-wrapper {
+      perspective: 1200px;
+      height: 10%;
+      margin: 0 auto 18px;
+      position: relative;
+      padding: 0 4px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 640px;
+      margin: 0 auto;
+      background: transparent;
+      border-radius: var(--radius);
+      box-shadow: none;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .card-inner {
+      position: relative;
+      min-height: 160px;
+      border-radius: var(--radius);
+      background: var(--card-bg);
+      box-shadow: var(--shadow);
+      padding: 28px 26px;
+      transform-style: preserve-3d;
+      transition: transform var(--transition), box-shadow var(--transition), background 0.3s ease;
+    }
+
+    .card-inner:hover {
+      box-shadow: 0 18px 48px rgba(15, 23, 42, 0.22);
+      transform: translateY(-2px) rotateY(var(--rotateY, 0deg));
+    }
+
+    .card-inner {
+      --rotateY: 0deg;
+      transform: rotateY(0deg);
+    }
+
+    .card.flipped .card-inner {
+      --rotateY: 180deg;
+      transform: rotateY(180deg);
+    }
+
+    .face {
+      position: absolute;
+      inset: 0;
+      backface-visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      text-align: left;
+      padding: 28px 26px;
+      border-radius: var(--radius);
+      background: var(--card-bg);
+    }
+
+    .face.back {
+      transform: rotateY(180deg);
+    }
+
+    .label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .question {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      font-weight: 600;
+      color: #111827;
+    }
+
+    .answer {
+      font-size: 1.03rem;
+      color: #111827;
+    }
+
+    .answer strong {
+      color: #0f766e;
+    }
+
+    .small-note {
+      font-size: 0.84rem;
+      color: var(--muted);
+      margin-top: 16px;
+    }
+
+    .controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      max-width: 640px;
+      margin: 0 auto;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    button {
+      border: none;
+      border-radius: 999px;
+      padding: 9px 18px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+      background: #e5e7eb;
+      color: #111827;
+      white-space: nowrap;
+    }
+
+    button span.icon {
+      font-size: 1.1rem;
+    }
+
+    button.primary {
+      background: var(--primary);
+      color: white;
+      box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+    }
+
+    button.primary:hover {
+      background: #316fd0;
+      transform: translateY(-1px);
+      box-shadow: 0 14px 30px rgba(37, 99, 235, 0.4);
+    }
+
+    button.ghost {
+      background: transparent;
+      border: 1px solid #d1d5db;
+    }
+
+    button:hover:not(:disabled) {
+      transform: translateY(-1px);
+    }
+
+    button:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+
+    .counter {
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .counter strong {
+      color: #111827;
+    }
+
+    /* Mobile */
+    @media (max-width: 700px) {
+      body {
+        padding: 12px;
+      }
+
+      .card-wrapper {
+        padding: 0;
+      }
+
+      .card-inner {
+        padding: 20px 16px;
+        box-shadow: 0 10px 26px rgba(15, 23, 42, 0.14);
+      }
+
+      .face {
+        padding: 20px 16px;
+      }
+
+      .question,
+      .answer {
+        font-size: 1.02rem;
+      }
+      .controls {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+      }
+
+      .btn-group {
+        justify-content: center;
+      }
+
+      button {
+        flex: 1 1 auto;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app">
+    <div class="chip">
+      <span class="chip-dot"></span>
+      Farmacologia — Flashcards
+    </div>
+
+    <h1>Flashcards: Interações Medicamentosas com Anestésicos Locais</h1>
+    <p class="subtitle">
+      Clique no cartão ou no botão para ver a resposta. Use os botões de navegação para trocar de questão.
+    </p>
+
+    <div class="card-wrapper">
+      <div class="card" id="flashcard">
+        <div class="card-inner">
+          <div class="face front">
+            <div class="label">Pergunta</div>
+            <div class="question" id="question-text">
+              O que você entende por farmacodinâmica?
+            </div>
+            <div class="small-note">Clique no cartão para ver a resposta.</div>
+          </div>
+
+          <div class="face back">
+            <div class="label" style="color: var(--accent);">Resposta</div>
+            <div class="answer" id="answer-text">
+              Parte da farmacologia que estuda o que o fármaco faz no organismo,
+              isto é, seus mecanismos de ação e efeitos bioquímicos e fisiológicos.
+            </div>
+            <div class="small-note">Clique novamente para voltar à pergunta.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <div class="btn-group">
+        <button id="prev-btn" class="ghost">
+          <span class="icon">⟵</span> Anterior
+        </button>
+
+        <button id="flip-btn" class="primary">
+          <span class="icon">🔄</span> Mostrar resposta
+        </button>
+
+        <button id="next-btn" class="ghost">
+          Próximo <span class="icon">⟶</span>
+        </button>
+      </div>
+
+      <div class="counter">
+        Card <strong id="current-index">1</strong> de <strong id="total-cards">1</strong>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const flashcards = [
+      /* 1 – Conceito de interação */
+      {
+        question: "O que é interação medicamentosa?",
+        answer: "É a alteração no efeito ou na toxicidade de um fármaco em virtude do uso concomitante de outros medicamentos (ou substâncias). Pode ser benéfica (aumentando a eficácia) ou prejudicial (reduzindo o efeito ou aumentando a toxicidade)."
+      },
+      /* 2 – Quando vira problema */
+      {
+        question: "Quando a interação medicamentosa se torna um problema clínico?",
+        answer: "Quando suas consequências causam dano ao paciente, como aumento importante da toxicidade, falha terapêutica, descompensação de doenças de base ou até eventos irreversíveis, como arritmias graves e parada cardiorrespiratória."
+      },
+      /* 3 – Conceito de anestésico local */
+      {
+        question: "Qual é a principal ação dos anestésicos locais na odontologia?",
+        answer: "Eles bloqueiam os canais de sódio das membranas plasmáticas, impedindo a despolarização e a condução do impulso nervoso. Assim, interrompem a transmissão do estímulo doloroso, sem alterar o nível de consciência do paciente."
+      },
+      /* 4 – Estrutura geral */
+      {
+        question: "Quais são as três porções principais da estrutura de um anestésico local?",
+        answer: "1) Porção aromática lipofílica (facilita a penetração na membrana);\n2) Cadeia intermediária (do tipo éster ou amida);\n3) Grupamento amina hidrofílico (influencia solubilidade e velocidade de ação)."
+      },
+      /* 5 – Tipo éster */
+      {
+        question: "Quais são características dos anestésicos locais do tipo éster?",
+        answer: "Possuem grupo funcional -COO-, são mais instáveis e mais propensos a reações alérgicas, pois sua metabolização forma ácidos (como PABA). Exemplos: procaína, benzocaína e tetracaína."
+      },
+      /* 6 – Tipo amida */
+      {
+        question: "Quais são características dos anestésicos locais do tipo amida?",
+        answer: "Possuem grupo -CONH-, são metabolizados por enzimas hepáticas, têm efeito mais duradouro, maior estabilidade e menor tendência a provocar reações alérgicas quando comparados aos ésteres."
+      },
+      /* 7 – Conceito de receptor */
+      {
+        question: "O que são receptores celulares na farmacologia?",
+        answer: "São grandes moléculas (geralmente proteínas) na membrana ou no interior da célula, responsáveis por reconhecer sinais químicos (como fármacos, hormônios e neurotransmissores) e desencadear respostas biológicas."
+      },
+      /* 8 – Ligante */
+      {
+        question: "O que é um ligante (ligand) em farmacologia?",
+        answer: "É a molécula que se liga especificamente ao receptor, formando o complexo receptor–ligante. Pode ser agonista (ativa o receptor) ou antagonista (bloqueia a resposta)."
+      },
+      /* 9 – Afinidade e eficácia */
+      {
+        question: "Qual a diferença entre afinidade e eficácia de um fármaco?",
+        answer: "<strong>Afinidade</strong>: capacidade de se ligar ao receptor.\n<strong>Eficácia</strong>: capacidade de, após se ligar, desencadear uma resposta biológica. Um fármaco pode ter alta afinidade, mas baixa eficácia (ex.: agonista parcial)."
+      },
+      /* 10 – Farmacodinâmica x Farmacocinética */
+      {
+        question: "Resuma a diferença entre farmacodinâmica e farmacocinética.",
+        answer: "<strong>Farmacodinâmica</strong>: estuda o efeito do fármaco no organismo (receptores, resposta tecidual, intensidade do efeito).\n<strong>Farmacocinética</strong>: estuda o que o organismo faz com o fármaco (absorção, distribuição, metabolismo e excreção)."
+      },
+      /* 11 – Interações farmacodinâmicas */
+      {
+        question: "O que são interações farmacodinâmicas?",
+        answer: "São interações que modificam a sensibilidade ou a resposta do tecido a um fármaco, podendo resultar em aumento (agonismo, sinergismo) ou redução (antagonismo) da resposta clínica, sem alterar a concentração plasmática do fármaco."
+      },
+      /* 12 – Interações farmacocinéticas */
+      {
+        question: "O que são interações farmacocinéticas?",
+        answer: "São aquelas em que um fármaco altera a absorção, distribuição, ligação a proteínas, metabolismo ou excreção de outro. Modificam quanto de fármaco chega ao local de ação e por quanto tempo permanece ativo."
+      },
+      /* 13 – Lidocaína ficha básica */
+      {
+        question: "Qual o mecanismo de ação e a duração aproximada da lidocaína 2% com vasoconstritor?",
+        answer: "A lidocaína bloqueia canais de sódio, impedindo a condução do impulso nervoso. Em odontologia, com vasoconstritor, promove cerca de 40–60 minutos de anestesia pulpar."
+      },
+      /* 14 – Indicações lidocaína */
+      {
+        question: "Liste algumas indicações clínicas da lidocaína 2% em odontologia.",
+        answer: "Pode ser usada em: pacientes pediátricos, gestantes, diabéticos, cardiopatas hipertensos controlados (estágio I) e asmáticos, desde que respeitadas as doses e contraindicações."
+      },
+      /* 15 – Contraindicações lidocaína */
+      {
+        question: "Quais são algumas contraindicações importantes para o uso de lidocaína?",
+        answer: "Alergia à lidocaína ou a componentes da fórmula, bloqueio cardíaco de 2º ou 3º grau (sem marcapasso) e doença hepática grave, que compromete o metabolismo do fármaco."
+      },
+      /* 16 – Toxicidade anestésicos locais: SNC */
+      {
+        question: "Quais são os principais sinais de toxicidade por anestésicos locais no sistema nervoso central (SNC)?",
+        answer: "Inicialmente: excitação, tontura, zumbido, gosto metálico, ansiedade e confusão. Em seguida, podem surgir convulsões, seguidas de depressão do SNC, coma e parada respiratória em casos graves."
+      },
+      /* 17 – Toxicidade anestésicos locais: cardiovascular */
+      {
+        question: "Quais manifestações cardiovasculares podem ocorrer na toxicidade por anestésicos locais?",
+        answer: "Taquicardia inicial, seguida de possível bradicardia, arritmias e, em situações extremas, parada cardíaca, especialmente com doses altas ou em pacientes cardiopatas."
+      },
+      /* 18 – Vasoconstritor + analgésico/anestésico */
+      {
+        question: "Por que se adicionam vasoconstritores às soluções de anestésicos locais?",
+        answer: "Para prolongar a duração da anestesia, reduzir a absorção sistêmica do fármaco, diminuir o sangramento local e reduzir o risco de toxicidade sistêmica."
+      },
+      /* 19 – Reações alérgicas e ésteres */
+      {
+        question: "Por que anestésicos locais do tipo éster estão mais associados a reações alérgicas?",
+        answer: "Porque sua metabolização pode gerar PABA (ácido para-aminobenzoico) e outros compostos ácidos, que são mais antigenênicos e podem desencadear hipersensibilidade."
+      },
+      /* 20 – Antidepressivos tricíclicos/IMAO */
+      {
+        question: "Qual o risco da associação de antidepressivos tricíclicos ou IMAO com anestésicos que contêm adrenalina?",
+        answer: "Esses antidepressivos aumentam a sensibilidade adrenérgica, podendo intensificar os efeitos cardiovasculares da adrenalina e favorecer crises hipertensivas e arritmias graves."
+      },
+      /* 21 – Antidepressivos ISRS/IRSN */
+      {
+        question: "Como ISRS e IRSN podem influenciar a toxicidade dos anestésicos locais?",
+        answer: "Eles interferem na recaptação de serotonina/noradrenalina e podem elevar a excitabilidade neuronal, facilitando convulsões quando ocorre toxicidade sistêmica por anestésicos locais."
+      },
+      /* 22 – Anti-hipertensivos e vasoconstritores */
+      {
+        question: "Qual a preocupação ao usar anestésicos locais com adrenalina em pacientes sob beta-bloqueadores não seletivos?",
+        answer: "Há redução da capacidade de compensação cardiovascular, aumentando o risco de bradicardia e hipertensão paradoxal devido à ação combinada da adrenalina com o bloqueio beta."
+      },
+      /* 23 – Anticonvulsivantes indutores enzimáticos */
+      {
+        question: "Como anticonvulsivantes como carbamazepina e fenitoína interagem com anestésicos locais tipo amida?",
+        answer: "Eles induzem enzimas hepáticas, acelerando o metabolismo das amidas, o que pode reduzir a duração e a eficácia clínica do anestésico local."
+      },
+      /* 24 – Benzodiazepínicos e toxicidade */
+      {
+        question: "Por que benzodiazepínicos podem dificultar o reconhecimento precoce da toxicidade por anestésicos locais?",
+        answer: "Porque têm efeito sedativo e ansiolítico, mascarando sintomas iniciais de excitação do SNC (agitação, tremores), retardando o diagnóstico de LAST (toxicidade sistêmica por anestésico local)."
+      },
+      /* 25 – Macrolídeos e amidas */
+      {
+        question: "Qual o impacto dos antibióticos macrolídeos (ex.: eritromicina) sobre anestésicos locais do tipo amida?",
+        answer: "Macrolídeos podem inibir o metabolismo hepático das amidas, aumentando os níveis plasmáticos do anestésico e o risco de toxicidade sistêmica."
+      },
+      /* 26 – Fluoroquinolonas */
+      {
+        question: "Por que fluoroquinolonas exigem cautela quando associadas a anestésicos locais?",
+        answer: "Porque reduzem o limiar convulsivo, facilitando a ocorrência de crises epilépticas quando há toxicidade sistêmica por anestésicos locais."
+      },
+      /* 27 – Antiarrítmicos classe I */
+      {
+        question: "Como antiarrítmicos da classe I interagem com anestésicos locais?",
+        answer: "Eles também bloqueiam canais de sódio. A associação com anestésicos locais potencializa o bloqueio da condução cardíaca e aumenta o risco de arritmias e depressão do automatismo."
+      },
+      /* 28 – Amiodarona */
+      {
+        question: "Qual o cuidado com a amiodarona em pacientes que receberão anestésicos locais?",
+        answer: "A amiodarona deprime ainda mais a condução cardíaca; em conjunto com anestésicos locais, aumenta o risco de bradicardia, hipotensão e arritmias graves, exigindo monitorização rigorosa."
+      },
+      /* 29 – Anticoagulantes/antiagregantes */
+      {
+        question: "Por que anticoagulantes e antiagregantes aumentam o risco de toxicidade por anestésicos locais em bloqueios profundos?",
+        answer: "Eles elevam o risco de hematomas em áreas muito vascularizadas; esses hematomas favorecem maior absorção sistêmica do anestésico, aumentando a chance de toxicidade."
+      },
+      /* 30 – Descongestionantes + adrenalina */
+      {
+        question: "Qual o risco da associação de descongestionantes simpaticomiméticos com anestésicos contendo adrenalina?",
+        answer: "A soma dos efeitos adrenérgicos pode desencadear taquicardia, hipertensão e maior sobrecarga cardiovascular, sobretudo em pacientes com doença cardíaca ou hipertensão."
+      },
+      /* 31 – Anti-histamínicos sedativos */
+      {
+        question: "Como anti-histamínicos sedativos podem interferir na segurança dos anestésicos locais?",
+        answer: "Por terem efeito depressor do SNC, podem potencializar sonolência e confusão, dificultando a percepção precoce de sinais de toxicidade neurológica por anestésicos locais."
+      },
+      /* 32 – Monitorização clínica e laboratorial */
+      {
+        question: "Quais são pilares importantes da monitorização de pacientes em uso de múltiplos fármacos e anestésicos locais?",
+        answer: "1) Avaliação periódica com exames laboratoriais (função hepática, renal, níveis de fármacos);\n2) Observação de sinais e sintomas (tontura, sangramento, náuseas);\n3) Registro sistemático de mudanças clínicas após início ou suspensão de medicamentos."
+      }
+    ];
+
+    const card = document.getElementById("flashcard");
+    const questionText = document.getElementById("question-text");
+    const answerText = document.getElementById("answer-text");
+    const prevBtn = document.getElementById("prev-btn");
+    const nextBtn = document.getElementById("next-btn");
+    const flipBtn = document.getElementById("flip-btn");
+    const currentIndexSpan = document.getElementById("current-index");
+    const totalCardsSpan = document.getElementById("total-cards");
+
+    let currentIndex = 0;
+    let isFlipped = false;
+
+    function renderCard() {
+      const cardData = flashcards[currentIndex];
+      questionText.textContent = cardData.question;
+      answerText.innerHTML = cardData.answer.replace(/\n/g, "<br>");
+
+      currentIndexSpan.textContent = currentIndex + 1;
+      totalCardsSpan.textContent = flashcards.length;
+
+      prevBtn.disabled = currentIndex === 0;
+      nextBtn.disabled = currentIndex === flashcards.length - 1;
+
+      if (isFlipped) {
+        toggleFlip(false);
+      }
+    }
+
+    function toggleFlip(forceState) {
+      if (typeof forceState === "boolean") {
+        isFlipped = forceState;
+      } else {
+        isFlipped = !isFlipped;
+      }
+
+      if (isFlipped) {
+        card.classList.add("flipped");
+        flipBtn.innerHTML = '<span class="icon">👀</span> Mostrar pergunta';
+      } else {
+        card.classList.remove("flipped");
+        flipBtn.innerHTML = '<span class="icon">🔄</span> Mostrar resposta';
+      }
+    }
+
+    card.addEventListener("click", () => {
+      toggleFlip();
+    });
+
+    flipBtn.addEventListener("click", () => {
+      toggleFlip();
+    });
+
+    prevBtn.addEventListener("click", () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+        renderCard();
+      }
+    });
+
+    nextBtn.addEventListener("click", () => {
+      if (currentIndex < flashcards.length - 1) {
+        currentIndex++;
+        renderCard();
+      }
+    });
+
+    renderCard();
+  </script>
+</body>
+</html>

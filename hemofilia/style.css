@@ -12,29 +12,20 @@
 
 /* ------------------ BASE ------------------ */
 body {
-  font-family: Arial, Helvetica, sans-serif;
   background: #f5f7fb;
-  color: #222;
-  line-height: 1.6;
   padding: 20px;
 }
 
 /* ------------------ CABEÇALHO ------------------ */
 header {
-  max-width: 960px;
+  max-width: 1200px;
   margin: 0 auto 20px auto;
   text-align: center;
 }
 
-header h1 {
-  font-size: 1.8rem;
-  margin-bottom: 8px;
-  color: #1f3b57;
-}
-
 header p {
-  font-size: 0.95rem;
-  color: #555;
+  font-size: 1.5rem;
+
 }
 
 /* ------------------ LAYOUT DOS CARDS ------------------ */
@@ -160,7 +151,7 @@ header p {
     padding: 12px 14px;
     border-radius: 14px;
     background: #eef2ff;
-    color: #0da0e9;
+    color: #05a3f1;
     line-height: 1.5;
     /* Remove margens fixas aqui. Elas serão corrigidas na media query */
     margin: 30px 0; 
@@ -221,7 +212,7 @@ header p {
     flex-shrink: 0;
     padding:4px 10px;
     border-radius:999px;
-    font-size:0.8rem;
+    font-size:1.2rem;
     text-transform:uppercase;
     letter-spacing:0.08em;
     background:#ecfeff;
@@ -488,6 +479,47 @@ details:hover {
   box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
+.grid-interacoes {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr)); /* 5 colunas na mesma fila */
+  gap: 18px; /* espaço entre os cards */
+  margin-top: 20px;
+}
+
+/* Deixa os cards mais compactos pra caber melhor em 5 colunas */
+.card-interacao {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-interacao p {
+  font-size: 13px;   /* um pouco menor pra caber melhor */
+  line-height: 1.4;
+}
+
+/* Responsivo: em telas menores, vai quebrando a linha */
+@media (max-width: 1200px) {
+  .grid-interacoes {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .grid-interacoes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-interacoes {
+    grid-template-columns: 1fr;
+  }
+}
+
 details[open] {
   flex: 1 1 auto;
   transform: translateY(-4px);
@@ -606,7 +638,7 @@ details:nth-child(5) .content h3 { color: var(--accent5); }
 
   --hoockers-green_20: hsl(0, 96%, 39%, 0.2);
   --pale-spring-bud: hsl(60, 68%, 85%);
-  --hoockers-green: hsl(0, 97%, 35%);
+  --hoockers-green: hsl(207, 95%, 41%);
   --spanish-gray: hsl(0, 0%, 61%);
   --light-gray: hsl(0, 0%, 80%);
   --cultured-1: hsl(0, 0%, 97%);
@@ -1373,7 +1405,7 @@ card-content2 {
 .offer .section-text { font-size: var(--fs-6); }
 
 .offer .countdown {
-  color: var(--hoockers-green);
+  color:#0da0e9;
   font-size: var(--fs-2);
   line-height: 1;
   display: flex;
@@ -2065,7 +2097,7 @@ card-content2 {
 .banner-card .btn {
   display: inline-block;
   padding: 10px 20px;
-  background-color: darkred;
+  background-color: #02496d;
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
@@ -2074,7 +2106,7 @@ card-content2 {
 }
 
 .banner-card .btn:hover {
-  background-color: #b22222;
+  background-color: #155e75;
 }
 .reference {
   margin-bottom: 20px;
