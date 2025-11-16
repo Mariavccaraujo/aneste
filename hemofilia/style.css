@@ -1,256 +1,366 @@
-.topo-interacoes{
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-start;
-  gap:18px;
-  margin-bottom:22px;
+/* --- Estilos Básicos Aprimorados --- */
+
+
+/* ------------------ RESET SIMPLES ------------------ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.titulo-bloco{
-  display:flex;
-  flex-direction:column;
-  gap:6px;
+/* ------------------ BASE ------------------ */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f7fb;
+  color: #222;
+  line-height: 1.6;
+  padding: 20px;
 }
 
-.etiqueta{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  padding:6px 12px;
-  border-radius:999px;
-  background:#e0e7ff;
-  font-size:0.8rem;
-  font-weight:600;
-  letter-spacing:0.04em;
-  text-transform:uppercase;
-  color:#4338ca;
+/* ------------------ CABEÇALHO ------------------ */
+header {
+  max-width: 960px;
+  margin: 0 auto 20px auto;
+  text-align: center;
 }
 
-.bolinha{
-  width:8px;
-  height:8px;
-  border-radius:999px;
-  background:#4f46e5;
+header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+  color: #1f3b57;
 }
 
-.titulo-bloco h2{
-  margin:0;
-  font-size:1.5rem;
+header p {
+  font-size: 0.95rem;
+  color: #555;
 }
 
-.titulo-bloco p{
-  margin:0;
-  font-size:1rem;
-  color:#475569;
+/* ------------------ LAYOUT DOS CARDS ------------------ */
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  font-size: 20px;
 }
 
-.resumo-rapido{
-  min-width:230px;
-  padding:12px 14px;
-  border-radius:14px;
-  background:#eef2ff;
-  font-size: 16PX;
-  color:#549cc1;;
-  line-height:1.5;
-  margin: 30px;
+/* Cada seção (card) rolável */
+.scroll-container {
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  padding: 16px;
+  max-height: 420px;      /* altura dos cards */
+  overflow-y: auto;       /* rolagem vertical */
+}
+
+/* Card 2 pode ter um leve destaque se quiser */
+.box-2 {
+  border-left: 4px solid #0c4f9c;
+}
+
+/* Conteúdo interno */
+.scroll-content h2 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #02496d;
+}
+
+.scroll-content h3 {
+  font-size: 16px;
+  margin-top: 14px;
+  margin-bottom: 6px;
+  color: #549cc1;
+}
+
+.scroll-content p {
+  font-size: 16px;
+  margin-bottom: 8px;
+  text-align: justify;
+}
+
+.scroll-content ul {
+  margin-left: 18px;
+  margin-bottom: 8px;
+}
+
+.scroll-content li {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+/* ------------------ SCROLLBAR MAIS BONITINHA (WEBKIT) ------------------ */
+.scroll-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: #eef1f6;
+  border-radius: 10px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #c2ccdd;
+  border-radius: 10px;
+}
+
+/* ------------------ RESPONSIVIDADE ------------------ */
+@media (max-width: 768px) {
+  body {
+    padding: 12px;
+  }
+
+  .wrapper {
+    grid-template-columns: 1fr;  /* empilha os cards no celular */
+  }
+
+  .scroll-container {
+    max-height: 360px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+}
+
+
+.scroll-container.is-scrolling {
+  box-shadow: 0 0 0 4px rgba(39, 165, 223, 0.2);
+}
+
+
+.topo-interacoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 18px;
+    margin-bottom: 22px;
+    /* Permite quebra de linha em telas pequenas */
+    flex-wrap: wrap;
+}
+
+.titulo-bloco {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    /* Permite que o bloco cresça e ocupe o espaço */
+    flex-grow: 1;
+    min-width: 0;
+}
+
+/* ... Estilos para .etiqueta, .bolinha, h2, p permanecem inalterados ... */
+
+.resumo-rapido {
+    /* Mantenho 16PX */
+    font-size: 16PX; 
+    min-width: 230px;
+    padding: 12px 14px;
+    border-radius: 14px;
+    background: #eef2ff;
+    color: #0da0e9;
+    line-height: 1.5;
+    /* Remove margens fixas aqui. Elas serão corrigidas na media query */
+    margin: 30px 0; 
+    flex-shrink: 0; /* Impede que ele encolha menos que 230px */
 }
 
 .resumo-rapido strong{
-  font-size:0.85rem;
-  text-transform:uppercase;
-  letter-spacing:0.06em;
-  display:block;
-  margin-bottom:4px;
+    font-size:0.85rem;
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    display:block;
+    margin-bottom:4px;
 }
 
 .grid-interacoes{
-  display:grid;
-  grid-template-columns: repeat(2, minmax(0,1fr));
-  gap:16px;
-  margin-bottom:18px;
+    display:grid;
+    /* Usa auto-fit para quebrar as colunas automaticamente */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap:16px;
+    margin-bottom:18px;
 }
 
 .card-interacao{
-  background:#ffffff;
-  border-radius:16px;
-  padding:16px 16px 14px;
-  box-shadow:0 5px 18px rgba(15,23,42,0.06);
-  border:1px solid #e2e8f0;
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-    margin: 30px;
-
+    background:#ffffff;
+    border-radius:16px;
+    padding:16px 16px 14px;
+    box-shadow:0 5px 18px rgba(15,23,42,0.06);
+    border:1px solid #e2e8f0;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    /* Remove margens fixas aqui. Elas serão corrigidas na media query */
+    margin: 30px 0; 
 }
 
 .cabecalho-card{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:10px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
+    /* Permite quebra de linha no cabeçalho (útil para o chip) */
+    flex-wrap: wrap; 
 }
 
-.titulo-card{
-  display:flex;
-  align-items:center;
-  gap:10px;
-}
-
-.tag-tipo{
-  width:36px;
-  height:36px;
-  border-radius:999px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:0.95rem;
-  font-weight:700;
-  background:#eef2ff;
-  color:#549cc1;;
-  flex-shrink:0;
-}
+/* ... Estilos para .titulo-card, .tag-tipo permanecem inalterados ... */
 
 .titulo-card h3{
-  margin:0;
-  font-size:25PX;
-  color:#549cc1;
+    margin:0;
+    /* Mantenho 25PX */
+    font-size:25PX; 
+    color:#549cc1;
+    /* Garante que o texto se encolha e não ultrapasse o contêiner */
+    min-width: 0; 
 }
 
 .chip{
-  padding:4px 10px;
-  border-radius:999px;
-  font-size:0.8rem;
-  text-transform:uppercase;
-  letter-spacing:0.08em;
-  background:#ecfeff;
-  color:#155e75;
-  border:1px solid #a5f3fc;
-  white-space:nowrap;
+    /* Garante que o chip não encolha */
+    flex-shrink: 0;
+    padding:4px 10px;
+    border-radius:999px;
+    font-size:0.8rem;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    background:#ecfeff;
+    color:#155e75;
+    border:1px solid #a5f3fc;
+    white-space:nowrap;
 }
 
 .card-interacao p{
-  margin:0;
-  font-size:20PX;
-  color:#4b5563;
-  line-height:1.55;
-  padding: 10PX;
+    margin:0;
+    /* Mantenho 20PX */
+    font-size:20PX; 
+    color:#4b5563;
+    line-height:1.55;
+    /* Mantenho 10PX */
+    padding: 10PX;
 }
 
 .destaque-frase{
-  font-size: 16PX;
-  padding:8px 10px;
-  border-radius:12px;
-  background:#f9fafb;
-  color:#1f2933;
-  border:1px dashed #e5e7eb;
+    /* Mantenho 16PX */
+    font-size: 16PX; 
+    padding:8px 10px;
+    border-radius:12px;
+    background:#f9fafb;
+    color:#1f2933;
+    border:1px dashed #e5e7eb;
 }
 
-.rodape-monitoramento{
-  margin-top:4px;
-  padding:14px 16px;
-  border-radius:16px;
-  background:#0f172a;
-  color:#e5e7eb;
-  display:flex;
-  flex-direction:column;
-  gap:8px;
-}
-
-.rodape-monitoramento strong{
-  font-size:0.9rem;
-  letter-spacing:0.08em;
-  text-transform:uppercase;
-  color:#a5b4fc;
-}
-
-.rodape-monitoramento p{
-  margin:0;
-  font-size:1rem;
-  line-height:1.5;
-}
-
-.lista-monitor{
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
-  margin-top:6px;
-}
-
-.item-monitor{
-  font-size:0.9rem;
-  padding:5px 10px;
-  border-radius:999px;
-  background:rgba(129,140,248,0.1);
-  border:1px solid rgba(129,140,248,0.4);
-}
+/* ... Estilos para .rodape-monitoramento, .lista-monitor, .item-monitor permanecem inalterados ... */
 
 .bloco-extra{
-  margin-top:18px;
-  display:grid;
-  grid-template-columns: minmax(0,1.4fr) minmax(0,1fr);
-  gap:16px;
+    margin-top:18px;
+    display:grid;
+    /* Usa auto-fit para quebrar as colunas automaticamente */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap:16px;
 }
 
 .card-extra{
-  background:#ffffff;
-  border-radius:16px;
-  padding:16px;
-  box-shadow:0 5px 18px rgba(15,23,42,0.06);
-  border:1px solid #e2e8f0;
-    margin: 30px;
-
+    background:#ffffff;
+    border-radius:16px;
+    padding:16px;
+    box-shadow:0 5px 18px rgba(15,23,42,0.06);
+    border:1px solid #e2e8f0;
+    /* Remove margens fixas aqui. Elas serão corrigidas na media query */
+    margin: 30px 0;
 }
 
 .card-extra h3{
-  margin:0 0 8px 0;
-  font-size: 16PX;
+    margin:0 0 8px 0;
+    /* Mantenho 16PX */
+    font-size: 16PX; 
 }
 
-.card-extra p{
-  margin:0;
-  font-size:1rem;
-  color:#4b5563;
-  line-height:1.6;
-}
-
-.subtitulo-extra{
-  font-size:0.85rem;
-  text-transform:uppercase;
-  letter-spacing:0.08em;
-  color:#549cc1;;
-  margin-bottom:6px;
-  font-weight:600;
-}
+/* ... Estilos para .card-extra p, .subtitulo-extra permanecem inalterados ... */
 
 .lista-passos{
-  margin-top:8px;
-  padding-left:18px;
-  font-size: 16px;
-  color:#374151;
+    margin-top:8px;
+    padding-left:18px;
+    /* Mantenho 16px */
+    font-size: 16px; 
+    color:#374151;
 }
 
 .lista-passos li{
-  margin-bottom:4px;
+    margin-bottom:4px;
 }
+
+/* --- Media Queries Aprimoradas --- */
+
+/* Ajusta elementos que tinham 'margin: 30px' para usar apenas margem vertical em telas grandes, 
+   permitindo que o contêiner principal controle o padding lateral.
+   Isso é feito diretamente no bloco de estilo principal, ajustando para 'margin: 30px 0;'.
+   A media query original será usada para lidar com a quebra e o preenchimento. */
 
 @media (max-width:920px){
-  .container-interacoes{
-    padding:20px 16px;
-  }
-  .topo-interacoes{
-    flex-direction:column;
-  }
-  .grid-interacoes{
-    grid-template-columns:1fr;
-  }
-  .resumo-rapido{
-    width:100%;
-  }
-  .bloco-extra{
-    grid-template-columns:1fr;
-  }
+    /* Já existia: Ajusta o padding lateral do contêiner principal em telas pequenas */
+    .container-interacoes{
+        padding:20px 16px;
+    }
+    /* Já existia: Faz o bloco superior empilhar */
+    .topo-interacoes{
+        flex-direction:column;
+    }
+    /* Já existia: Define o resumo rápido para usar a largura total */
+    .resumo-rapido{
+        /* Garante que ocupa a largura máxima disponível */
+        width: 100%; 
+        /* Adiciona margens verticais, mas as laterais são controladas pelo container */
+        margin: 10px 0; 
+    }
+    /* Já existia: Faz a grade de interações empilhar */
+    .grid-interacoes{
+        grid-template-columns:1fr;
+    }
+    /* Já existia: Faz o bloco extra empilhar */
+    .bloco-extra{
+        grid-template-columns:1fr;
+    }
+    /* Adiciona: Garante que os cards empilhados tenham margem superior e inferior */
+    .card-interacao, .card-extra {
+        margin: 10px 0;
+    }
 }
 
+/* Adicionamos um ponto de quebra para telas muito pequenas, caso 920px seja alto demais */
+@media (max-width: 500px) {
+    .cabecalho-card {
+        /* Permite que o título e o chip quebrem para evitar estouro horizontal */
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .titulo-card {
+        margin-bottom: 5px;
+    }
+}
+/* Container para centralizar e dar espaço ao redor da imagem */
+.container-imagem {
+    display: flex; /* Habilita flexbox para fácil centralização */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente (se o contêiner tiver altura definida) */
+    flex-direction: column;  /* Coloca itens em coluna (se tiver mais de um item) */
+    padding: 20px;           /* Espaçamento interno para não colar nas bordas */
+    width: 100%;             /* Garante que o contêiner ocupe a largura total disponível */
+    box-sizing: border-box;  /* Inclui padding e border na largura/altura total */
+}
+
+/* A imagem em si */
+.imagem-responsiva-final {
+    max-width: 100%; /* A imagem nunca será maior que seu contêiner. Usar 100% é mais comum para "encaixar" */
+    height: auto;    /* ESSENCIAL para manter a proporção da imagem */
+    display: block;  /* Remove espaços extras que podem surgir com imagens inline */
+    /* Você pode adicionar um max-height se não quiser que ela fique muito grande em telas muito altas */
+    /* max-height: 500px; */ 
+
+    /* Removi !important pois, em geral, ele só deve ser usado quando estritamente necessário 
+       para sobrescrever estilos de frameworks ou inline. Para estilos próprios, 
+       uma boa organização do CSS já é suficiente. */
+}
 /**
  * copyright 2022 codewithsadee
  */

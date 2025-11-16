@@ -1,4 +1,17 @@
 
+const scrollAreas = document.querySelectorAll("[data-scrollbar]");
+
+scrollAreas.forEach((area) => {
+  area.addEventListener("scroll", () => {
+    // Quando rolar, adiciona uma classe
+    if (area.scrollTop > 0) {
+      area.classList.add("is-scrolling");
+    } else {
+      area.classList.remove("is-scrolling");
+    }
+  });
+});
+
 
 
 'use strict';
