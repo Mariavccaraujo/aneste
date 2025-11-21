@@ -1,34 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  
+
 <style>
-   
+  .scrollbar-item {
+    flex: 0 0 240px;
+    /* Define a largura dos cartões */
 
+  }
 
-    .scrollbar-item {
-      flex: 0 0 240px; /* Define a largura dos cartões */
-      
-    }
+  .shop-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s ease;
+  }
 
-    .shop-card {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      background-color: #fff;
-      transition: transform 0.3s ease;
-    }
-
-    .shop-card:hover {
-      transform: scale(1.05);
-    }
-
-  
- 
-  </style>
+  .shop-card:hover {
+    transform: scale(1.05);
+  }
 </style>
+</style>
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -73,7 +69,7 @@
 
     <div class="alert">
       <div class="container">
-        <p class="alert-text" style="text-align: center;" >Interação Medicamentosas com Anestésicos Locais</p>
+        <p class="alert-text" style="text-align: center;">Interação Medicamentosas com Anestésicos Locais</p>
       </div>
     </div>
 
@@ -85,12 +81,12 @@
           <a href="#home" class="navbar-link has-after">Conceito</a>
         </li>
 
-    
-<li>
+
+        <li>
           <a href="#fisiopatologia" class="navbar-link has-after">Interações fármaco-receptor
-      </a>
+          </a>
         </li>
-            <li>
+        <li>
           <a href="#shop" class="navbar-link has-after">Anestésicos Locais
         </li>
         <li>
@@ -171,230 +167,284 @@
       <!-- 
         - #HERO
       -->
-    
+
 
 
       <section class="section collection" id="collection" aria-label="collection" data-section>
-        
+
         <div class="container">
           <li class="scrollbar-item">
-              <div class="hero-card has-bg-image"
-                style="background-image: url('https://eapgoias.com.br/wp-content/uploads/2023/11/anestesia-dentista-3.jpg')">
+            <div class="hero-card has-bg-image"
+              style="background-image: url('https://eapgoias.com.br/wp-content/uploads/2023/11/anestesia-dentista-3.jpg')">
 
-                <div class="card-content" >
-                 
-                  <h1 class="h1 hero-title" id="text1">
-Interação Medicamentosas com Anestésicos Locais:                  </h1>
+              <div class="card-content">
 
-                  <p class="hero-text">
-                  Os profissionais da área da saúde, em especial os médicos e cirurgiões-dentistas, durante o tratamento de seus pacientes, têm como responsabilidade manter o bem-estar e a segurança, para isso, faz-se a prescrição de medicações e anestésicos. Entretanto, esses fármacos podem interagir e causar alterações potenciais, quando usados com anestésicos locais. Sendo assim, o presente trabalho tem como função detalhar um pouco sobre o problema.
-   </p>
+                <h1 class="h1 hero-title" id="text1">
+                  Interação Medicamentosas com Anestésicos Locais: </h1>
 
-                </div>
+                <p class="hero-text">
+                  Os profissionais da área da saúde, em especial os médicos e cirurgiões-dentistas, durante o tratamento
+                  de seus pacientes, têm como responsabilidade manter o bem-estar e a segurança, para isso, faz-se a
+                  prescrição de medicações e anestésicos. Entretanto, esses fármacos podem interagir e causar alterações
+                  potenciais, quando usados com anestésicos locais. Sendo assim, o presente trabalho tem como função
+                  detalhar um pouco sobre o problema.
+                </p>
 
               </div>
-            </li>
-          
-<br><br>
-          <h1 class="collection-title" style="font-size: 2em; color: #549cc1;">
-Conceito          </h1>
-            <p style="font-size: 20px;" id="home">
-              <BR>A interação medicamentosa é definida como uma alteração no efeito ou na toxicidade de um fármaco em virtude do uso concomitante de outros medicamentos. Essas interações podem ser benéficas, quando aumentam a eficácia do fármaco, ou maléficas, quando diminuem sua eficiência e aumentam sua toxicidade. Isso se torna um problema quando suas consequências causam danos ao paciente, podendo ser até irreversíveis.<br>
-        <br id="shop">
-        <h1 class="collection-title" style="font-size: 2em; color: #549cc1;">
-        
- 
-        
-          <h1 style="color: #549cc1;">Anestéscos Locais:
-          </h1>
-            <p style="font-size: 20px;">
-              <BR> <strong>Os anestésicos locais</strong> são medicamentos essenciais para a realização de procedimentos odontológicos.
-        A principal função é <strong>impedir a despolarização das membranas plásmáticas no canal de sódio</strong>, bloqueando temporariamente a
-        transmissão do impulso nervoso e, assim, inibir o sinal de dor do paciente.  Isso ocorre sem promover mudanças de consciência no paciente.  O anestésico é formado por três porções: uma porção aromática com base lipofílica, que permite sua penetração nas membranas plasmáticas das células; uma cadeia intermediária, que pode ser do tipo <b>amida</b> ou <b>éster</b>; e um grupamento amina hidrofílico, responsável por determinar a solubilidade e a velocidade de ação do fármaco.
- <br> <br>
-            </p>
-        <br>
-        <ul class="lista-metabolismo">
-    <li><strong>Tipo Éster:</strong> A estrutura química dos anestésicos com base éster inclui um grupo funcional de carbonila (-COO-), uma cadeia carbônica e um grupamento amina. De modo geral, esses medicamentos são instáveis e são mais propensos a reações alérgicas, pois sua metabolização produz ácidos. Exemplos: procaína, benzocaína e tetracaína.</li>
-    <li><strong>Tipo Amida:</strong> Já os anestésicos com base em grupamentos amida possuem a estrutura de um grupamento amida (-CONH-). Eles são metabolizados por enzimas hepáticas, o que garante um efeito mais duradouro. Em relação à estabilidade, eles são <strong> mais estáveis</strong> que os com base em éster e são menos propensos a alergias.</li>
-</ul>
-      <br>
 
-<br id="fisiopatologia">
-    <h1 style="color:#549cc1"> Receptores e ligantes da Membrana Celular</h1> <br>
-                <p style="font-size: 20px;" id="home">
-
-
-      Na membrana celular e no hialoplasma, existem estruturas denominadas de
-      <strong>receptores</strong>, que são grandes moléculas responsáveis pela
-      <strong>sinalização química celular</strong>. Quando ativados, esses receptores regulam,
-      direta ou indiretamente, diversos processos bioquímicos da célula.<br><br>
-      Quando os receptores se ligam a compostos presentes nos fármacos, formam-se
-      complexos denominados ligantes, que apresentam <strong>alta seletividade</strong> em virtude da afinidade 
-      entre as moléculas. Essas interações estabelecem ligações químicas que podem ser
-      reversíveis ou irreversíveis.Esse ligante pode ativar ou inativar um receptor, podendo, assim,
-      aumentar ou diminuir uma funcionalidade celular específica. Aliás, um mesmo ligante
-      pode interagir com mais de um receptor.
-                </p>
-  <br> <div class="container-imagem">
-              <img src="farma.png" alt="Esquema que representa a ligação do fármaco"class="imagem-responsiva-final">
-            
             </div>
-            <p style="text-align: center;"><strong>Figura:</strong> Representação esquemática acerca da ligação do 
+          </li>
+
+          <br><br>
+          <h1 class="collection-title" style="font-size: 2em; color: #549cc1;">
+            Conceito </h1>
+          <p style="font-size: 20px;" id="home">
+            <BR>A interação medicamentosa é definida como uma alteração no efeito ou na toxicidade de um fármaco em
+            virtude do uso concomitante de outros medicamentos. Essas interações podem ser benéficas, quando aumentam a
+            eficácia do fármaco, ou maléficas, quando diminuem sua eficiência e aumentam sua toxicidade. Isso se torna
+            um problema quando suas consequências causam danos ao paciente, podendo ser até irreversíveis.<br>
+            <br id="shop">
+          <h1 class="collection-title" style="font-size: 2em; color: #549cc1;">
+
+
+
+            <h1 style="color: #549cc1;">Anestéscos Locais:
+            </h1>
+            <p style="font-size: 20px;">
+              <BR> <strong>Os anestésicos locais</strong> são medicamentos essenciais para a realização de procedimentos
+              odontológicos.
+              A principal função é <strong>impedir a despolarização das membranas plásmáticas no canal de
+                sódio</strong>, bloqueando temporariamente a
+              transmissão do impulso nervoso e, assim, inibir o sinal de dor do paciente. Isso ocorre sem promover
+              mudanças de consciência no paciente. O anestésico é formado por três porções: uma porção aromática com
+              base lipofílica, que permite sua penetração nas membranas plasmáticas das células; uma cadeia
+              intermediária, que pode ser do tipo <b>amida</b> ou <b>éster</b>; e um grupamento amina hidrofílico,
+              responsável por determinar a solubilidade e a velocidade de ação do fármaco.
+              <br> <br>
+            </p>
+            <br>
+            <ul class="lista-metabolismo">
+              <li><strong>Tipo Éster:</strong> A estrutura química dos anestésicos com base éster inclui um grupo
+                funcional de carbonila (-COO-), uma cadeia carbônica e um grupamento amina. De modo geral, esses
+                medicamentos são instáveis e são mais propensos a reações alérgicas, pois sua metabolização produz
+                ácidos. Exemplos: procaína, benzocaína e tetracaína.</li>
+              <li><strong>Tipo Amida:</strong> Já os anestésicos com base em grupamentos amida possuem a estrutura de um
+                grupamento amida (-CONH-). Eles são metabolizados por enzimas hepáticas, o que garante um efeito mais
+                duradouro. Em relação à estabilidade, eles são <strong> mais estáveis</strong> que os com base em éster
+                e são menos propensos a alergias.</li>
+            </ul>
+            <br>
+
+            <br id="fisiopatologia">
+            <h1 style="color:#549cc1"> Receptores e ligantes da Membrana Celular</h1> <br>
+            <p style="font-size: 20px;" id="home">
+
+
+              Na membrana celular e no hialoplasma, existem estruturas denominadas de
+              <strong>receptores</strong>, que são grandes moléculas responsáveis pela
+              <strong>sinalização química celular</strong>. Quando ativados, esses receptores regulam,
+              direta ou indiretamente, diversos processos bioquímicos da célula.<br><br>
+              Quando os receptores se ligam a compostos presentes nos fármacos, formam-se
+              complexos denominados ligantes, que apresentam <strong>alta seletividade</strong> em virtude da afinidade
+              entre as moléculas. Essas interações estabelecem ligações químicas que podem ser
+              reversíveis ou irreversíveis.Esse ligante pode ativar ou inativar um receptor, podendo, assim,
+              aumentar ou diminuir uma funcionalidade celular específica. Aliás, um mesmo ligante
+              pode interagir com mais de um receptor.
+            </p>
+            <br>
+            <div class="container-imagem">
+              <img src="farma.png" alt="Esquema que representa a ligação do fármaco" class="imagem-responsiva-final">
+
+            </div>
+            <p style="text-align: center;"><strong>Figura:</strong> Representação esquemática acerca da ligação do
               fármaco-receptor.
               Retirada de: Repositório (www.iq.ufrgs.br)
-              </p>
-<br>
-                <p style="font-size: 20px;" id="home">
-                   A capacidade de um medicamento interagir com a célula acontece justamente devido à
-  <strong>afinidade existente entre suas moléculas e os receptores celulares</strong>.
-  Essa afinidade determina a probabilidade de ocorrer a união entre ambos e,
-  consequentemente, influencia a <strong>eficácia do medicamento</strong>,
-  uma vez que a eficácia depende do
-  <strong>grau de ativação do receptor pelo ligante</strong> e da
-  <strong>resposta celular</strong>.
-                </p><Br>
-<p style="font-size: 20px" id="home">
-  A durabilidade farmacológica de um medicamento está intrinsecamente ligada ao tempo de resistência, que é o período em que a união fármaco-receptor persiste. Essa durabilidade pode ser alterada por processos farmacodinâmicos que irão interferir na velocidade da reação, atuando na associação ou desunião do fármaco. Esse tempo de persistência pode trazer prejuízos, caso ele ocorra por períodos prolongados, como a alteração do potencial de ação (ou eficácia) do fármaco, levando a uma diminuição do efeito terapêutico desejado ou ao acúmulo, que pode gerar o surgimento de efeitos tóxicos ao paciente.
-                </p>
-        <p      style="font-size: 20px;" id="home">
-                <br>Essa ligação ocorre em locais específicos chamados sítios de reconhecimento (ou sítios receptores). A atividade e o funcionamento desses receptores são influenciados por inúmeros fatores, tanto externos quanto por mecanismos intracelulares.
-O efeito da ligação pode variar de acordo com o tecido alvo e o tipo de molécula ligante, que pode ser o próprio fármaco (agonista exógeno) ou um agonista endógeno (como um hormônio ou neurotransmissor).
-Os principais fatores que afetam essa interação e, consequentemente, a resposta clínica do paciente, incluem os tipos de fármacos utilizados, o envelhecimento, as mutações genéticas e doenças (que alteram o metabolismo ou a expressão receptora), o número e a afinidade de ligação dos receptores.<br>
-<br>
-<p style="font-size: 20px;" id="home">
-Quando outras moléculas (sejam elas drogas ou substâncias endógenas) se ligam a esses sítios de reconhecimento, ou a outros locais inespecíficos que alteram a conformação do sítio principal, a ligação e, consequentemente, o funcionamento do fármaco podem ser impedidos. O fármaco só será plenamente ativo se estiver livre e com disponibilidade para se ligar ao seu sítio receptor alvo.</p>
- 
-<br><br></p>
+            </p>
+            <br>
+            <p style="font-size: 20px;" id="home">
+              A capacidade de um medicamento interagir com a célula acontece justamente devido à
+              <strong>afinidade existente entre suas moléculas e os receptores celulares</strong>.
+              Essa afinidade determina a probabilidade de ocorrer a união entre ambos e,
+              consequentemente, influencia a <strong>eficácia do medicamento</strong>,
+              uma vez que a eficácia depende do
+              <strong>grau de ativação do receptor pelo ligante</strong> e da
+              <strong>resposta celular</strong>.
+            </p><Br>
+            <p style="font-size: 20px" id="home">
+              A durabilidade farmacológica de um medicamento está intrinsecamente ligada ao tempo de resistência, que é
+              o período em que a união fármaco-receptor persiste. Essa durabilidade pode ser alterada por processos
+              farmacodinâmicos que irão interferir na velocidade da reação, atuando na associação ou desunião do
+              fármaco. Esse tempo de persistência pode trazer prejuízos, caso ele ocorra por períodos prolongados, como
+              a alteração do potencial de ação (ou eficácia) do fármaco, levando a uma diminuição do efeito terapêutico
+              desejado ou ao acúmulo, que pode gerar o surgimento de efeitos tóxicos ao paciente.
+            </p>
+            <p style="font-size: 20px;" id="home">
+              <br>Essa ligação ocorre em locais específicos chamados sítios de reconhecimento (ou sítios receptores). A
+              atividade e o funcionamento desses receptores são influenciados por inúmeros fatores, tanto externos
+              quanto por mecanismos intracelulares.
+              O efeito da ligação pode variar de acordo com o tecido alvo e o tipo de molécula ligante, que pode ser o
+              próprio fármaco (agonista exógeno) ou um agonista endógeno (como um hormônio ou neurotransmissor).
+              Os principais fatores que afetam essa interação e, consequentemente, a resposta clínica do paciente,
+              incluem os tipos de fármacos utilizados, o envelhecimento, as mutações genéticas e doenças (que alteram o
+              metabolismo ou a expressão receptora), o número e a afinidade de ligação dos receptores.<br>
+              <br>
+            <p style="font-size: 20px;" id="home">
+              Quando outras moléculas (sejam elas drogas ou substâncias endógenas) se ligam a esses sítios de
+              reconhecimento, ou a outros locais inespecíficos que alteram a conformação do sítio principal, a ligação
+              e, consequentemente, o funcionamento do fármaco podem ser impedidos. O fármaco só será plenamente ativo se
+              estiver livre e com disponibilidade para se ligar ao seu sítio receptor alvo.</p>
+
+            <br><br></p>
 
 
-<h1 style="color: #549cc1;">Principais Anestésicos Locais </h1>
-<br>
-<div class="accordion">
-  <details name="info" open>
-    <summary>Lidocaína</summary>
-    <div class="content">
-      <h3>Ficha do Anestésico</h3><ul >
-  <li><strong>Nome:</strong> Lidocaína 2%</li>
-  <li><strong>Mecanismo de ação:</strong> bloqueia os canais de sódio, impedindo a condução dos impulsos nervosos e promovendo anestesia local.</li>
-  <li><strong>Duração:</strong> aproximadamente <strong>40 a 60 minutos</strong> de anestesia pulpar (com vasoconstritor).</li>
-  <li><strong>Indicações:</strong>
-    <ul style="margin-top:6px; list-style:circle; margin-left:22px;">
-      <li>Pacientes pediátricos</li>
-      <li>Gestantes</li>
-      <li>Diabéticos</li>
-      <li>Cardiopatas hipertensos (estágio I ou controlados)</li>
-      <li>Asmáticos</li>
-    </ul>
-  </li>
-  <li><strong>Contraindicações:</strong>
-    <ul style="margin-top:6px; list-style:circle; margin-left:22px;">
-      <li>Alergia à lidocaína ou a componentes da formulação</li>
-      <li>Bloqueio cardíaco de 2° ou 3° grau (sem marcapasso)</li>
-      <li>Doença hepática grave</li>
-    </ul>
-  </li>
-</ul> </div>
-  </details>
+            <h1 style="color: #549cc1;">Principais Anestésicos Locais </h1>
+            <br>
+            <div class="accordion">
+              <details name="info" open>
+                <summary>Lidocaína</summary>
+                <div class="content">
+                  <h3>Ficha do Anestésico</h3>
+                  <ul>
+                    <li><strong>Nome:</strong> Lidocaína 2%</li>
+                    <li><strong>Mecanismo de ação:</strong> bloqueia os canais de sódio, impedindo a condução dos
+                      impulsos nervosos e promovendo anestesia local.</li>
+                    <li><strong>Duração:</strong> aproximadamente <strong>40 a 60 minutos</strong> de anestesia pulpar
+                      (com vasoconstritor).</li>
+                    <li><strong>Indicações:</strong>
+                      <ul style="margin-top:6px; list-style:circle; margin-left:22px;">
+                        <li>Pacientes pediátricos</li>
+                        <li>Gestantes</li>
+                        <li>Diabéticos</li>
+                        <li>Cardiopatas hipertensos (estágio I ou controlados)</li>
+                        <li>Asmáticos</li>
+                      </ul>
+                    </li>
+                    <li><strong>Contraindicações:</strong>
+                      <ul style="margin-top:6px; list-style:circle; margin-left:22px;">
+                        <li>Alergia à lidocaína ou a componentes da formulação</li>
+                        <li>Bloqueio cardíaco de 2° ou 3° grau (sem marcapasso)</li>
+                        <li>Doença hepática grave</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </details>
 
-  <details name="info">
-   
-  <summary>Articaína</summary>
-  <div class="content">
-    <h3>Ficha do Anestésico</h3>
-    <ul>
-      <li><strong>Concentração:</strong> 4%</li>
-      <li><strong>Potência elevada</strong> e <strong>rápida difusão tecidual</strong></li>
-      <li><strong>Duração média:</strong> 60 a 75 minutos</li>
-      <li><strong>Indicação:</strong> Procedimentos odontológicos de média a longa duração</li>
-      <li><strong>Vantagens:</strong> Excelente penetração óssea e rápida ação</li>
-      <li><strong>Contraindicações:</strong>
-        <ul>
-          <li>Crianças pequenas</li>
-          <li>Gestantes</li>
-        </ul>
-      </li>
-      <li><strong>Observações:</strong> Evitar uso em áreas com infecção, pois o pH alterado pode reduzir a eficácia</li>
-    </ul></div>
-  </details>
+              <details name="info">
 
-  <details name="info">
-    <summary>Mepivacaína</summary>
-  <div class="content">
-    <h3>Ficha do Anestésico</h3>
-    <ul>
-      <li><strong>Concentração:</strong> 2% a 3%</li>
-      <li><strong>Ação intermediária</strong> e <strong>baixa vasodilatação</strong></li>
-      <li><strong>Duração média:</strong> 30 a 45 minutos</li>
-      <li><strong>Indicação:</strong>
-        <ul>
-          <li>Pacientes que não toleram vasoconstritores</li>
-          <li>Procedimentos curtos e moderados</li>
-        </ul>
-      </li>
-      <li><strong>Contraindicações:</strong>
-        <ul>
-          <li>Hipersensibilidade conhecida</li>
-          <li>Doenças hepáticas graves</li>
-        </ul>
-      </li>
-      <li><strong>Vantagem:</strong> Pode ser usada sem vasoconstritor, mantendo boa eficiência anestésica</li>
-    </ul> </div>
-  </details>
-   <details name="info">
-  <summary>Prilocaína</summary>
-  <div class="content">
-    <h3>Ficha do Anestésico</h3>
-    <ul>
-      <li><strong>Concentração:</strong> 3% a 4%</li>
-      <li><strong>Baixa toxicidade sistêmica</strong></li>
-      <li><strong>Duração média:</strong> 40 a 60 minutos</li>
-      <li><strong>Indicação:</strong>
-        <ul>
-          <li>Pacientes sensíveis à adrenalina</li>
-          <li>Procedimentos de curta a média duração</li>
-        </ul>
-      </li>
-      <li><strong>Contraindicações:</strong>
-        <ul>
-          <li>Anemia</li>
-          <li>Metemoglobinemia</li>
-        </ul>
-      </li>
-      <li><strong>Observações:</strong> Usar com cautela em gestantes e pacientes debilitados</li>
-    </ul>
-  </div>
-  </details>
-   <details name="info">
-   <summary>Bupivacaína</summary>
-  <div class="content">
-    <h3>Ficha do Anestésico</h3>
-    <ul>
-      <li><strong>Concentração:</strong> 0,5%</li>
-      <li><strong>Ação prolongada:</strong> até 3 a 8 horas</li>
-      <li><strong>Alta lipossolubilidade</strong>, o que prolonga sua duração</li>
-      <li><strong>Indicação:</strong> Cirurgias extensas e procedimentos de longa duração</li>
-      <li><strong>Contraindicações:</strong>
-        <ul>
-          <li>Gestantes</li>
-          <li>Pacientes com doenças cardíacas graves</li>
-        </ul>
-      </li>
-      <li><strong>Observações:</strong> Pode causar arritmias se usada em doses elevadas</li>
-    </ul>
-  </div>
-  </details>
-  
-</div><br><br>
-                <h3 class="collection-title" style="font-size: 2em; color: #549cc1;" > Uso Racional de Medicamentos na Prática Odontológica: Papel do Cirurgião-Dentista na Prescrição Segura e Eficaz
-                </h3>
-          <p style="font-size: 20px;"><br>
-           Na prática odontológica, o uso de medicamentos é um recurso fundamental para prevenir, controlar ou tratar condições relacionadas à saúde bucal e sistêmica do paciente. Esses fármacos podem ser utilizados durante os procedimentos clínicos, como no manejo de dor, ansiedade e infecções; e, ainda, no pós-operatório, visando otimizar a recuperação e minimizar complicações.
-<br><br>
-Entre as classes mais empregadas estão os analgésicos e anti-inflamatórios, voltados para o controle da dor e da inflamação; e os antimicrobianos, indicados em situações específicas para prevenir ou tratar infecções. Além disso, ansiolíticos, corticoides e enxaguatórios antissépticos também fazem parte do arsenal terapêutico odontológico.
-<br><br>
-O uso racional desses medicamentos requer conhecimento aprofundado de farmacologia, indicações, posologia, interações medicamentosas e possíveis efeitos adversos, respeitando sempre as particularidades clínicas de cada paciente. Uma prescrição segura e efetiva contribui para o sucesso do tratamento odontológico e para a preservação da saúde geral, reforçando a importância da atualização constante do profissional em relação aos avanços terapêuticos e normativos.
-A prescrição medicamentosa em odontologia é uma prática fundamental para o manejo clínico do paciente, estando diretamente relacionada à prevenção, ao controle e ao tratamento de diversas condições que envolvem a cavidade bucal e estruturas adjacentes.
+                <summary>Articaína</summary>
+                <div class="content">
+                  <h3>Ficha do Anestésico</h3>
+                  <ul>
+                    <li><strong>Concentração:</strong> 4%</li>
+                    <li><strong>Potência elevada</strong> e <strong>rápida difusão tecidual</strong></li>
+                    <li><strong>Duração média:</strong> 60 a 75 minutos</li>
+                    <li><strong>Indicação:</strong> Procedimentos odontológicos de média a longa duração</li>
+                    <li><strong>Vantagens:</strong> Excelente penetração óssea e rápida ação</li>
+                    <li><strong>Contraindicações:</strong>
+                      <ul>
+                        <li>Crianças pequenas</li>
+                        <li>Gestantes</li>
+                      </ul>
+                    </li>
+                    <li><strong>Observações:</strong> Evitar uso em áreas com infecção, pois o pH alterado pode reduzir
+                      a eficácia</li>
+                  </ul>
+                </div>
+              </details>
+
+              <details name="info">
+                <summary>Mepivacaína</summary>
+                <div class="content">
+                  <h3>Ficha do Anestésico</h3>
+                  <ul>
+                    <li><strong>Concentração:</strong> 2% a 3%</li>
+                    <li><strong>Ação intermediária</strong> e <strong>baixa vasodilatação</strong></li>
+                    <li><strong>Duração média:</strong> 30 a 45 minutos</li>
+                    <li><strong>Indicação:</strong>
+                      <ul>
+                        <li>Pacientes que não toleram vasoconstritores</li>
+                        <li>Procedimentos curtos e moderados</li>
+                      </ul>
+                    </li>
+                    <li><strong>Contraindicações:</strong>
+                      <ul>
+                        <li>Hipersensibilidade conhecida</li>
+                        <li>Doenças hepáticas graves</li>
+                      </ul>
+                    </li>
+                    <li><strong>Vantagem:</strong> Pode ser usada sem vasoconstritor, mantendo boa eficiência anestésica
+                    </li>
+                  </ul>
+                </div>
+              </details>
+              <details name="info">
+                <summary>Prilocaína</summary>
+                <div class="content">
+                  <h3>Ficha do Anestésico</h3>
+                  <ul>
+                    <li><strong>Concentração:</strong> 3% a 4%</li>
+                    <li><strong>Baixa toxicidade sistêmica</strong></li>
+                    <li><strong>Duração média:</strong> 40 a 60 minutos</li>
+                    <li><strong>Indicação:</strong>
+                      <ul>
+                        <li>Pacientes sensíveis à adrenalina</li>
+                        <li>Procedimentos de curta a média duração</li>
+                      </ul>
+                    </li>
+                    <li><strong>Contraindicações:</strong>
+                      <ul>
+                        <li>Anemia</li>
+                        <li>Metemoglobinemia</li>
+                      </ul>
+                    </li>
+                    <li><strong>Observações:</strong> Usar com cautela em gestantes e pacientes debilitados</li>
+                  </ul>
+                </div>
+              </details>
+              <details name="info">
+                <summary>Bupivacaína</summary>
+                <div class="content">
+                  <h3>Ficha do Anestésico</h3>
+                  <ul>
+                    <li><strong>Concentração:</strong> 0,5%</li>
+                    <li><strong>Ação prolongada:</strong> até 3 a 8 horas</li>
+                    <li><strong>Alta lipossolubilidade</strong>, o que prolonga sua duração</li>
+                    <li><strong>Indicação:</strong> Cirurgias extensas e procedimentos de longa duração</li>
+                    <li><strong>Contraindicações:</strong>
+                      <ul>
+                        <li>Gestantes</li>
+                        <li>Pacientes com doenças cardíacas graves</li>
+                      </ul>
+                    </li>
+                    <li><strong>Observações:</strong> Pode causar arritmias se usada em doses elevadas</li>
+                  </ul>
+                </div>
+              </details>
+
+            </div><br><br>
+            <h3 class="collection-title" style="font-size: 2em; color: #549cc1;"> Uso Racional de Medicamentos na
+              Prática Odontológica: Papel do Cirurgião-Dentista na Prescrição Segura e Eficaz
+            </h3>
+            <p style="font-size: 20px;"><br>
+              Na prática odontológica, o uso de medicamentos é um recurso fundamental para prevenir, controlar ou tratar
+              condições relacionadas à saúde bucal e sistêmica do paciente. Esses fármacos podem ser utilizados durante
+              os procedimentos clínicos, como no manejo de dor, ansiedade e infecções; e, ainda, no pós-operatório,
+              visando otimizar a recuperação e minimizar complicações.
+              <br><br>
+              Entre as classes mais empregadas estão os analgésicos e anti-inflamatórios, voltados para o controle da
+              dor e da inflamação; e os antimicrobianos, indicados em situações específicas para prevenir ou tratar
+              infecções. Além disso, ansiolíticos, corticoides e enxaguatórios antissépticos também fazem parte do
+              arsenal terapêutico odontológico.
+              <br><br>
+              O uso racional desses medicamentos requer conhecimento aprofundado de farmacologia, indicações, posologia,
+              interações medicamentosas e possíveis efeitos adversos, respeitando sempre as particularidades clínicas de
+              cada paciente. Uma prescrição segura e efetiva contribui para o sucesso do tratamento odontológico e para
+              a preservação da saúde geral, reforçando a importância da atualização constante do profissional em relação
+              aos avanços terapêuticos e normativos.
+              A prescrição medicamentosa em odontologia é uma prática fundamental para o manejo clínico do paciente,
+              estando diretamente relacionada à prevenção, ao controle e ao tratamento de diversas condições que
+              envolvem a cavidade bucal e estruturas adjacentes.
 
       </section>
 
@@ -408,219 +458,220 @@ A prescrição medicamentosa em odontologia é uma prática fundamental para o m
       <!-- 
         - #SHOP
       -->
-<!-- INTERAÇÕES FARMACOCINÉTICAS -->
+      <!-- INTERAÇÕES FARMACOCINÉTICAS -->
 
 
 
-<div id="interacoes" class="card-interacao">
-  <div class="cabecalho-card">
-    <div class="titulo-card">
-      <div class="tag-tipo">FD / FK</div>
-      <h3>Interações Farmacodinâmicas e Farmacocinéticas</h3>
-    </div>
-    <div class="chip">Efeito, concentração & monitoramento</div>
-  </div>
+      <div id="interacoes" class="card-interacao">
+        <div class="cabecalho-card">
+          <div class="titulo-card">
+            <div class="tag-tipo">FD / FK</div>
+            <h3>Interações Farmacodinâmicas e Farmacocinéticas</h3>
+          </div>
+          <div class="chip">Efeito, concentração & monitoramento</div>
+        </div>
 
-  <!-- FARMACODINÂMICAS -->
-  <p>
-    As <strong>interações farmacodinâmicas</strong> são modificações que alteram a 
-    <strong>sensibilidade</strong> ou a <strong>resposta tecidual</strong> quando em contato 
-    com outro fármaco. Elas podem ter efeito <strong>agonista</strong> (aumentando a resposta) 
-    ou <strong>antagonista</strong> (reduzindo a resposta) e ocorrer tanto no nível do 
-    <strong>receptor membranar</strong> quanto do <strong>receptor intracelular</strong>.
-  </p>
+        <!-- FARMACODINÂMICAS -->
+        <p>
+          As <strong>interações farmacodinâmicas</strong> são modificações que alteram a
+          <strong>sensibilidade</strong> ou a <strong>resposta tecidual</strong> quando em contato
+          com outro fármaco. Elas podem ter efeito <strong>agonista</strong> (aumentando a resposta)
+          ou <strong>antagonista</strong> (reduzindo a resposta) e ocorrer tanto no nível do
+          <strong>receptor membranar</strong> quanto do <strong>receptor intracelular</strong>.
+        </p>
 
-  <!-- FARMACOCINÉTICAS -->
-  <p>
-    Já as <strong>interações farmacocinéticas</strong> ocorrem quando um medicamento consegue alterar a 
-    <strong>absorção, distribuição, ligação às proteínas, biotransformação (metabolismo) 
-    ou excreção</strong> de outra medicação. Desse modo, a interação modifica tanto a 
-    <strong>quantidade</strong> quanto a <strong>persistência da disponibilidade</strong> do fármaco 
-    no local de ação.
-  </p>
-  <p>
-    Entretanto, esse tipo de interação <strong>não altera o mecanismo de ação</strong> do fármaco, 
-    mas sim a sua <strong>duração</strong> e a <strong>magnitude do efeito</strong>.
-  </p>
+        <!-- FARMACOCINÉTICAS -->
+        <p>
+          Já as <strong>interações farmacocinéticas</strong> ocorrem quando um medicamento consegue alterar a
+          <strong>absorção, distribuição, ligação às proteínas, biotransformação (metabolismo)
+            ou excreção</strong> de outra medicação. Desse modo, a interação modifica tanto a
+          <strong>quantidade</strong> quanto a <strong>persistência da disponibilidade</strong> do fármaco
+          no local de ação.
+        </p>
+        <p>
+          Entretanto, esse tipo de interação <strong>não altera o mecanismo de ação</strong> do fármaco,
+          mas sim a sua <strong>duração</strong> e a <strong>magnitude do efeito</strong>.
+        </p>
 
-  <!-- PREVISÃO & MONITORAMENTO -->
-  <p>
-    A ocorrência de <strong>interações medicamentosas</strong> pode, com frequência, ser 
-    <strong>prevista</strong> com base no conhecimento das <strong>propriedades farmacológicas</strong> 
-    dos medicamentos individuais.
-    Além disso, as interações podem ser <strong>detectadas e gerenciadas</strong> por meio do 
-    <strong>monitoramento das concentrações dos fármacos no plasma</strong> ou pela observação 
-    dos <strong>sinais clínicos</strong> do paciente.
-  </p>
+        <!-- PREVISÃO & MONITORAMENTO -->
+        <p>
+          A ocorrência de <strong>interações medicamentosas</strong> pode, com frequência, ser
+          <strong>prevista</strong> com base no conhecimento das <strong>propriedades farmacológicas</strong>
+          dos medicamentos individuais.
+          Além disso, as interações podem ser <strong>detectadas e gerenciadas</strong> por meio do
+          <strong>monitoramento das concentrações dos fármacos no plasma</strong> ou pela observação
+          dos <strong>sinais clínicos</strong> do paciente.
+        </p>
 
-  <div class="destaque-frase">
-    Resumo: <strong>farmacodinâmica</strong> foca na <strong>resposta/efeito</strong> do tecido, enquanto a 
-    <strong>farmacocinética</strong> foca em <strong>quanto</strong> fármaco chega ao organismo e 
-    <strong>por quanto tempo</strong> ele permanece ativo, exigindo <strong>previsão</strong> e 
-    <strong>monitoramento clínico e laboratorial</strong>.
-  </div>
-</div>
+        <div class="destaque-frase">
+          Resumo: <strong>farmacodinâmica</strong> foca na <strong>resposta/efeito</strong> do tecido, enquanto a
+          <strong>farmacocinética</strong> foca em <strong>quanto</strong> fármaco chega ao organismo e
+          <strong>por quanto tempo</strong> ele permanece ativo, exigindo <strong>previsão</strong> e
+          <strong>monitoramento clínico e laboratorial</strong>.
+        </div>
+      </div>
 
-<div class="resumo-rapido">
-  <strong style="font-size: 16px;">Visão geral</strong>
-  Farmacodinâmica = efeito no receptor e na resposta tecidual.  <br>
-  Farmacocinética = alterações na absorção, distribuição, metabolismo e excreção.
-</div><br>
+      <div class="resumo-rapido">
+        <strong style="font-size: 16px;">Visão geral</strong>
+        Farmacodinâmica = efeito no receptor e na resposta tecidual. <br>
+        Farmacocinética = alterações na absorção, distribuição, metabolismo e excreção.
+      </div><br>
 
-<header>
-  <h1 style="color: #098dcf; font-size: 22px;">Agonistas, Antagonistas e Sinergismo</h1>
-</header>
-<br>
-<div class="wrapper">
-  <!-- CARD 1: AGONISTAS E ANTAGONISTAS -->
-  <section class="scroll-container" data-scrollbar>
-    <div class="scroll-content">
-      <h2>Agonistas</h2>
-      <p><strong>Agonistas</strong> ativam receptores que produzem a resposta desejada.</p>
+      <header>
+        <h1 style="color: #098dcf; font-size: 22px;">Agonistas, Antagonistas e Sinergismo</h1>
+      </header>
+      <br>
+      <div class="wrapper">
+        <!-- CARD 1: AGONISTAS E ANTAGONISTAS -->
+        <section class="scroll-container" data-scrollbar>
+          <div class="scroll-content">
+            <h2>Agonistas</h2>
+            <p><strong>Agonistas</strong> ativam receptores que produzem a resposta desejada.</p>
 
-      <h3>Agonistas convencionais</h3>
-      <p>
-        Aumentam a proporção de receptores ativados, gerando a resposta típica do sistema.
-      </p>
+            <h3>Agonistas convencionais</h3>
+            <p>
+              Aumentam a proporção de receptores ativados, gerando a resposta típica do sistema.
+            </p>
 
-      <h3>Agonistas inversos</h3>
-      <p>
-        Estabilizam o receptor em sua <strong>conformação inativa</strong> e agem de forma semelhante
-        aos antagonistas competitivos, reduzindo a atividade basal do receptor.
-      </p>
+            <h3>Agonistas inversos</h3>
+            <p>
+              Estabilizam o receptor em sua <strong>conformação inativa</strong> e agem de forma semelhante
+              aos antagonistas competitivos, reduzindo a atividade basal do receptor.
+            </p>
 
-      <h3>Exemplos de agonistas</h3>
-      <p>
-        Muitos hormônios, neurotransmissores e fármacos atuam como agonistas, como:
-      </p>
-      <ul>
-        <li>Neurotransmissores: acetilcolina, histamina, noradrenalina.</li>
-        <li>Fármacos: morfina, fenilefrina, isoproterenol, benzodiazepinas, barbitúricos.</li>
-      </ul>
+            <h3>Exemplos de agonistas</h3>
+            <p>
+              Muitos hormônios, neurotransmissores e fármacos atuam como agonistas, como:
+            </p>
+            <ul>
+              <li>Neurotransmissores: acetilcolina, histamina, noradrenalina.</li>
+              <li>Fármacos: morfina, fenilefrina, isoproterenol, benzodiazepinas, barbitúricos.</li>
+            </ul>
 
-      <h2>Antagonistas</h2>
-      <p>
-        <strong>Antagonistas</strong> impedem a ativação do receptor, bloqueando a ação de agonistas
-        endógenos ou exógenos.
-      </p>
+            <h2>Antagonistas</h2>
+            <p>
+              <strong>Antagonistas</strong> impedem a ativação do receptor, bloqueando a ação de agonistas
+              endógenos ou exógenos.
+            </p>
 
-      <h3>Efeito sobre a função celular</h3>
-      <ul>
-        <li>
-          <strong>Aumentam a função celular</strong> quando bloqueiam uma substância que
-          normalmente <em>diminui</em> a função.
-        </li>
-        <li>
-          <strong>Diminuem a função celular</strong> quando bloqueiam uma substância que
-          normalmente <em>aumenta</em> a função.
-        </li>
-      </ul>
+            <h3>Efeito sobre a função celular</h3>
+            <ul>
+              <li>
+                <strong>Aumentam a função celular</strong> quando bloqueiam uma substância que
+                normalmente <em>diminui</em> a função.
+              </li>
+              <li>
+                <strong>Diminuem a função celular</strong> quando bloqueiam uma substância que
+                normalmente <em>aumenta</em> a função.
+              </li>
+            </ul>
 
-      <h3>Classificação quanto à ligação ao receptor</h3>
-      <p><strong>Antagonistas reversíveis:</strong> dissociam-se prontamente do receptor.</p>
-      <p>
-        <strong>Antagonistas irreversíveis:</strong> formam ligação química estável, permanente
-        ou quase permanente (por exemplo, por alquilação).
-      </p>
-      <p>
-        <strong>Antagonistas pseudoirreversíveis:</strong> dissociam-se lentamente, gerando efeito
-        prolongado.
-      </p>
+            <h3>Classificação quanto à ligação ao receptor</h3>
+            <p><strong>Antagonistas reversíveis:</strong> dissociam-se prontamente do receptor.</p>
+            <p>
+              <strong>Antagonistas irreversíveis:</strong> formam ligação química estável, permanente
+              ou quase permanente (por exemplo, por alquilação).
+            </p>
+            <p>
+              <strong>Antagonistas pseudoirreversíveis:</strong> dissociam-se lentamente, gerando efeito
+              prolongado.
+            </p>
 
-      <h3>Antagonismo competitivo</h3>
-      <p>
-        No <strong>antagonismo competitivo</strong>, o antagonista compete com o agonista pelo mesmo
-        sítio de ligação no receptor, impedindo sua ligação.
-      </p>
+            <h3>Antagonismo competitivo</h3>
+            <p>
+              No <strong>antagonismo competitivo</strong>, o antagonista compete com o agonista pelo mesmo
+              sítio de ligação no receptor, impedindo sua ligação.
+            </p>
 
-      <h3>Antagonismo não competitivo</h3>
-      <p>
-        No <strong>antagonismo não competitivo</strong>, agonista e antagonista podem ligar-se
-        simultaneamente ao receptor, mas a ligação do antagonista reduz ou impede a ação do agonista,
-        geralmente por alteração alostérica ou bloqueio de etapa subsequente.
-      </p>
-    </div>
-  </section>
+            <h3>Antagonismo não competitivo</h3>
+            <p>
+              No <strong>antagonismo não competitivo</strong>, agonista e antagonista podem ligar-se
+              simultaneamente ao receptor, mas a ligação do antagonista reduz ou impede a ação do agonista,
+              geralmente por alteração alostérica ou bloqueio de etapa subsequente.
+            </p>
+          </div>
+        </section>
 
-  <!-- CARD 2: COMPETITIVO, EXEMPLOS E SINERGISMO -->
-  <section class="scroll-container box-2" data-scrollbar>
-    <div class="scroll-content">
-      <h2>Antagonismo competitivo reversível</h2>
-      <p>
-        No <strong>antagonismo competitivo reversível</strong>, tanto agonista quanto antagonista formam
-        ligações de curta duração com o receptor. Estabelece-se um equilíbrio dinâmico entre agonista,
-        antagonista e receptor.
-      </p>
-      <p>
-        Esse tipo de antagonismo pode ser <strong>superado</strong> pelo aumento da concentração do agonista.
-      </p>
+        <!-- CARD 2: COMPETITIVO, EXEMPLOS E SINERGISMO -->
+        <section class="scroll-container box-2" data-scrollbar>
+          <div class="scroll-content">
+            <h2>Antagonismo competitivo reversível</h2>
+            <p>
+              No <strong>antagonismo competitivo reversível</strong>, tanto agonista quanto antagonista formam
+              ligações de curta duração com o receptor. Estabelece-se um equilíbrio dinâmico entre agonista,
+              antagonista e receptor.
+            </p>
+            <p>
+              Esse tipo de antagonismo pode ser <strong>superado</strong> pelo aumento da concentração do agonista.
+            </p>
 
-      <h3>Exemplo clássico: naloxona × morfina</h3>
-      <p>
-        A <strong>naloxona</strong> é um antagonista do receptor opioide, estruturalmente semelhante
-        à morfina. Quando administrada pouco antes ou logo após a morfina, bloqueia seus efeitos.
-      </p>
-      <p>
-        Porém, esse antagonismo competitivo pode ser revertido com a administração de doses mais altas
-        de morfina, que deslocam a naloxona do receptor.
-      </p>
+            <h3>Exemplo clássico: naloxona × morfina</h3>
+            <p>
+              A <strong>naloxona</strong> é um antagonista do receptor opioide, estruturalmente semelhante
+              à morfina. Quando administrada pouco antes ou logo após a morfina, bloqueia seus efeitos.
+            </p>
+            <p>
+              Porém, esse antagonismo competitivo pode ser revertido com a administração de doses mais altas
+              de morfina, que deslocam a naloxona do receptor.
+            </p>
 
-      <h2>Agonistas parciais e agonistas/antagonistas</h2>
-      <p>
-        Análogos estruturais de agonistas podem apresentar <strong>eficácia baixa</strong> e, por isso,
-        ser classificados como <strong>agonistas parciais</strong>.
-      </p>
-      <p>
-        Eles podem exercer efeito agonista em determinadas condições e, ao mesmo tempo, atuar como
-        antagonistas de agonistas completos, competindo pelo mesmo receptor.
-      </p>
+            <h2>Agonistas parciais e agonistas/antagonistas</h2>
+            <p>
+              Análogos estruturais de agonistas podem apresentar <strong>eficácia baixa</strong> e, por isso,
+              ser classificados como <strong>agonistas parciais</strong>.
+            </p>
+            <p>
+              Eles podem exercer efeito agonista em determinadas condições e, ao mesmo tempo, atuar como
+              antagonistas de agonistas completos, competindo pelo mesmo receptor.
+            </p>
 
-      <h3>Pentazocina</h3>
-      <p>
-        A <strong>pentazocina</strong> ativa receptores opioides, desencadeando efeitos típicos de opioides,
-        mas também pode <strong>bloquear</strong> a ativação desses receptores por outros opioides.
-      </p>
-      <p>
-        Assim, comporta-se como <strong>agonista parcial</strong> e também como
-        <strong>agonista/antagonista</strong>, atenuando os efeitos de outro opioide administrado
-        enquanto ainda estiver ligada ao receptor.
-      </p>
-      <p>
-        Um fármaco que age como agonista parcial em um tecido pode atuar como agonista completo em outro,
-        dependendo da reserva de receptores e do sistema envolvido.
-      </p>
+            <h3>Pentazocina</h3>
+            <p>
+              A <strong>pentazocina</strong> ativa receptores opioides, desencadeando efeitos típicos de opioides,
+              mas também pode <strong>bloquear</strong> a ativação desses receptores por outros opioides.
+            </p>
+            <p>
+              Assim, comporta-se como <strong>agonista parcial</strong> e também como
+              <strong>agonista/antagonista</strong>, atenuando os efeitos de outro opioide administrado
+              enquanto ainda estiver ligada ao receptor.
+            </p>
+            <p>
+              Um fármaco que age como agonista parcial em um tecido pode atuar como agonista completo em outro,
+              dependendo da reserva de receptores e do sistema envolvido.
+            </p>
 
-      <h2>Sinergismo farmacológico</h2>
-      <p>
-        <strong>Sinergismo</strong> ocorre quando a associação de dois fármacos produz um efeito
-        maior do que o efeito de cada um isoladamente.
-      </p>
+            <h2>Sinergismo farmacológico</h2>
+            <p>
+              <strong>Sinergismo</strong> ocorre quando a associação de dois fármacos produz um efeito
+              maior do que o efeito de cada um isoladamente.
+            </p>
 
-      <h3>Sinergismo aditivo</h3>
-      <p>
-        No <strong>sinergismo aditivo</strong>, os efeitos dos fármacos se somam de forma previsível
-        (efeito total ≈ efeito A + efeito B).
-      </p>
-      <p>
-        Exemplo: uso conjunto de dois anti-hipertensivos com mecanismos distintos, resultando em
-        maior redução da pressão arterial.
-      </p>
+            <h3>Sinergismo aditivo</h3>
+            <p>
+              No <strong>sinergismo aditivo</strong>, os efeitos dos fármacos se somam de forma previsível
+              (efeito total ≈ efeito A + efeito B).
+            </p>
+            <p>
+              Exemplo: uso conjunto de dois anti-hipertensivos com mecanismos distintos, resultando em
+              maior redução da pressão arterial.
+            </p>
 
-      <h3>Sinergismo potencializador</h3>
-      <p>
-        No <strong>sinergismo potencializador</strong>, um fármaco tem pouco ou nenhum efeito isoladamente,
-        mas aumenta de forma importante o efeito de outro fármaco quando usados em associação.
-      </p>
-      <p>
-        Exemplos:
-      </p>
-      <ul>
-        <li>Cafeína potencializando o efeito analgésico de alguns fármacos.</li>
-        <li>Associação de benzodiazepínicos com outros depressores do SNC, intensificando a depressão do sistema nervoso central.</li>
-      </ul>
-    </div>
-  </section>
-</div>
+            <h3>Sinergismo potencializador</h3>
+            <p>
+              No <strong>sinergismo potencializador</strong>, um fármaco tem pouco ou nenhum efeito isoladamente,
+              mas aumenta de forma importante o efeito de outro fármaco quando usados em associação.
+            </p>
+            <p>
+              Exemplos:
+            </p>
+            <ul>
+              <li>Cafeína potencializando o efeito analgésico de alguns fármacos.</li>
+              <li>Associação de benzodiazepínicos com outros depressores do SNC, intensificando a depressão do sistema
+                nervoso central.</li>
+            </ul>
+          </div>
+        </section>
+      </div>
 
 
 
@@ -641,25 +692,38 @@ A prescrição medicamentosa em odontologia é uma prática fundamental para o m
                   <p class="card-subtitle">Quais são os principais</p>
                   <h2 class="h2 card-title" id="sintomas">Sintomas?</h2>
                   <p class="card-text" style="font-size: 20px;">
-Na composição dos analgésicos podem ser agregados vasoconstritores, que são utilizados para prolongar a ação e duração dos analgésicos, além de reduzir a absorção sistêmica e o risco de toxicidade.
+                    Na composição dos analgésicos podem ser agregados vasoconstritores, que são utilizados para
+                    prolongar a ação e duração dos analgésicos, além de reduzir a absorção sistêmica e o risco de
+                    toxicidade.
 
-As reações alérgicas geralmente ocorrem com analgésicos à base de ésteres, devido à formação do composto chamado PABA durante a metabolização do fármaco.
-<br><br>
-A toxicidade causada por anestésicos locais é uma complicação significativa, afetando principalmente o sistema nervoso central (SNC) e o sistema cardiovascular. Inicialmente, no SNC, os pacientes podem apresentar sintomas como excitação, tontura e zumbido nos ouvidos. À medida que a toxicidade se intensifica, convulsões podem ocorrer, seguidas por uma depressão progressiva do SNC, que pode culminar em coma e parada respiratória. No que se refere ao sistema cardiovascular, os primeiros sinais incluem taquicardia, que pode dar lugar à bradicardia, além de arritmias e, em casos extremos, parada cardíaca.
-<br><br>
+                    As reações alérgicas geralmente ocorrem com analgésicos à base de ésteres, devido à formação do
+                    composto chamado PABA durante a metabolização do fármaco.
+                    <br><br>
+                    A toxicidade causada por anestésicos locais é uma complicação significativa, afetando principalmente
+                    o sistema nervoso central (SNC) e o sistema cardiovascular. Inicialmente, no SNC, os pacientes podem
+                    apresentar sintomas como excitação, tontura e zumbido nos ouvidos. À medida que a toxicidade se
+                    intensifica, convulsões podem ocorrer, seguidas por uma depressão progressiva do SNC, que pode
+                    culminar em coma e parada respiratória. No que se refere ao sistema cardiovascular, os primeiros
+                    sinais incluem taquicardia, que pode dar lugar à bradicardia, além de arritmias e, em casos
+                    extremos, parada cardíaca.
+                    <br><br>
 
-Os sintomas gerais de importância clínica, em ordem decrescente de frequência, incluem: tontura ou sensação de vertigem, zumbido nos ouvidos, alteração do paladar com gosto metálico na boca, nervosismo ou sensação de ansiedade, confusão mental ou dificuldade de concentração, diplopia e uma fase inicial de excitação, que pode envolver agitação, tremores leves ou espasmos musculares.
-<br><br>
+                    Os sintomas gerais de importância clínica, em ordem decrescente de frequência, incluem: tontura ou
+                    sensação de vertigem, zumbido nos ouvidos, alteração do paladar com gosto metálico na boca,
+                    nervosismo ou sensação de ansiedade, confusão mental ou dificuldade de concentração, diplopia e uma
+                    fase inicial de excitação, que pode envolver agitação, tremores leves ou espasmos musculares.
+                    <br><br>
 
-                  <a href="https://revistaft.com.br/anestesicos-locais-e-suas-principais-complicacoes-e-tratamento-uma-revisao-cientifica/" class="btn btn-secondary">Saiba Mais</a>
+                    <a href="https://revistaft.com.br/anestesicos-locais-e-suas-principais-complicacoes-e-tratamento-uma-revisao-cientifica/"
+                      class="btn btn-secondary">Saiba Mais</a>
                 </div>
-               
+
               </div>
             </li>
 
             <li>
               <div class="banner-card banner-card-2 has-before hover:shine">
-                 <div class="has-bg-image" style="background-image: url('diaag.jpg')"></div>
+                <div class="has-bg-image" style="background-image: url('diaag.jpg')"></div>
 
               </div>
             </li>
@@ -681,8 +745,8 @@ Os sintomas gerais de importância clínica, em ordem decrescente de frequência
         <div class="container">
 
           <h2 class="h2-large section-title">
-Como monitorar o paciente?</h2>
-         
+            Como monitorar o paciente?</h2>
+
           <br><br>
           <ul class="flex-list">
 
@@ -696,7 +760,10 @@ Como monitorar o paciente?</h2>
                 </h3>
 
                 <p class="card-text">
-O tratamento do paciente nessas condições inclui avaliações periódicas baseadas em exames laboratoriais. Nesses exames serão aferidas as concentrações dos fármacos, bem como o estado renal e hepático do paciente. Tendo em vista os dados obtidos, serão feitas análises que irão subsidiar o tratamento, permitindo ajustar as doses e prevenir futuros problemas.
+                  O tratamento do paciente nessas condições inclui avaliações periódicas baseadas em exames
+                  laboratoriais. Nesses exames serão aferidas as concentrações dos fármacos, bem como o estado renal e
+                  hepático do paciente. Tendo em vista os dados obtidos, serão feitas análises que irão subsidiar o
+                  tratamento, permitindo ajustar as doses e prevenir futuros problemas.
 
               </div>
             </li>
@@ -704,15 +771,18 @@ O tratamento do paciente nessas condições inclui avaliações periódicas base
             <li class="flex-item">
               <div class="feature-card">
 
-                <img src="arteria.png" width="204" height="236" loading="lazy"
-                  alt="Completely Cruelty-Free" class="card-icon">
+                <img src="arteria.png" width="204" height="236" loading="lazy" alt="Completely Cruelty-Free"
+                  class="card-icon">
 
                 <h3 class="h3 card-title">
                   Observação dos sinais e sintomas
                 </h3>
 
                 <p class="card-text">
-Além disso, a anamnese é essencial para levantar as queixas do paciente, uma vez que náuseas, tonturas, sangramentos e outros sintomas, por mais habituais que sejam, podem ser sinais de alterações significativas na saúde do paciente. Visto isso, é essencial que o médico ou cirurgião-dentista monitore o paciente para que, caso ocorra qualquer alteração, seja feita a substituição do fármaco.
+                  Além disso, a anamnese é essencial para levantar as queixas do paciente, uma vez que náuseas,
+                  tonturas, sangramentos e outros sintomas, por mais habituais que sejam, podem ser sinais de alterações
+                  significativas na saúde do paciente. Visto isso, é essencial que o médico ou cirurgião-dentista
+                  monitore o paciente para que, caso ocorra qualquer alteração, seja feita a substituição do fármaco.
 
               </div>
             </li>
@@ -720,14 +790,16 @@ Além disso, a anamnese é essencial para levantar as queixas do paciente, uma v
             <li class="flex-item">
               <div class="feature-card">
 
-                <img src="https://cdn-icons-png.flaticon.com/512/5219/5219382.png" width="204" height="236" loading="lazy"
-                  alt="Ingredient Sourcing" class="card-icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/5219/5219382.png" width="204" height="236"
+                  loading="lazy" alt="Ingredient Sourcing" class="card-icon">
 
                 <h3 class="h3 card-title">Registro e uso de protocolos
                 </h3>
 
                 <p class="card-text">
-O responsável pelo quadro clínico deve se atentar e registrar qualquer mudança na condição do paciente após a introdução ou suspensão de determinado medicamento. Ademais, é de grande importância a leitura das bulas, indicações e protocolos das medicações que serão prescritas.
+                  O responsável pelo quadro clínico deve se atentar e registrar qualquer mudança na condição do paciente
+                  após a introdução ou suspensão de determinado medicamento. Ademais, é de grande importância a leitura
+                  das bulas, indicações e protocolos das medicações que serão prescritas.
               </div>
             </li>
 
@@ -737,302 +809,332 @@ O responsável pelo quadro clínico deve se atentar e registrar qualquer mudanç
       </section>
 
 
-      
 
-  <section class="section" data-section>
-    <div class="container">
 
-      <!-- CABEÇALHO DO RELATÓRIO -->
-      <div class="offer-banner" style="margin-bottom: 30px;">
-        <div>
-          <p class="badge">Relatório Ampliado</p>
-          <h1 class="h2-large" style="margin-top: 10px;">
-            Interações Medicamentosas com Anestésicos Locais
-          </h1>
-          <p class="section-text" style="margin-top: 10px;">
-            Anestésicos locais do grupo dos <strong>ésteres</strong> e das <strong>amidas</strong> são amplamente utilizados em
-            procedimentos médicos e odontológicos. Entretanto, podem interagir com diversas classes de fármacos,
-            gerando efeitos adversos neurológicos, cardiovasculares e metabólicos.
-          </p>
-        </div>
+      <section class="section" data-section>
+        <div class="container">
 
-        <!-- RESUMO RÁPIDO EM FORMATO DE CARD -->
-        <div class="resumo-rapido">
-          <strong>Resumo clínico</strong>
-          Atenção especial a pacientes em uso de antidepressivos, anti-hipertensivos, anticonvulsivantes,
-          antibióticos, antiarrítmicos e outras classes que potencializam a <strong>toxicidade sistêmica</strong> dos
-          anestésicos locais ou os efeitos cardiovasculares da adrenalina.
-        </div>
-      </div>
+          <!-- CABEÇALHO DO RELATÓRIO -->
+          <div class="offer-banner" style="margin-bottom: 30px;">
+            <div>
+              <p class="badge">Relatório Ampliado</p>
+              <h1 class="h2-large" style="margin-top: 10px;">
+                Interações Medicamentosas com Anestésicos Locais
+              </h1>
+              <p class="section-text" style="margin-top: 10px;">
+                Anestésicos locais podem interagir com diversas classes de fármacos,
+                gerando efeitos adversos neurológicos, cardiovasculares e metabólicos.
+              </p>
+          
 
-      <!-- GRADE PRINCIPAL DE INTERAÇÕES -->
-      <div class="grid-interacoes">
-
-        <!-- CARD: ANTIDEPRESSIVOS -->
-        <article class="card-interacao">
-          <header class="cabecalho-card">
-            <div class="titulo-card">
-              <h3>Interações com Antidepressivos</h3>
+            <!-- RESUMO RÁPIDO EM FORMATO DE CARD -->
+            <div class="resumo-rapido">
+              <strong style="font-size: 14px;">Resumo clínico</strong>
+              Atenção especial a pacientes em uso de antidepressivos, anti-hipertensivos, anticonvulsivantes,
+              antibióticos, antiarrítmicos e outras classes que potencializam a <strong     style="font-size: 14px;">
+                toxicidade sistêmica</strong>
+              dos
+              anestésicos locais ou os efeitos cardiovasculares da adrenalina.
             </div>
-            <span class="chip">SNC & CV</span>
-          </header>
-
-          <p>
-            Tricíclicos e inibidores da monoaminoxidase (<strong>IMAO</strong>) podem aumentar a sensibilidade dos
-            receptores adrenérgicos, intensificando os efeitos da <strong>adrenalina</strong> presente nas soluções
-            anestésicas. Isso favorece <strong>crises hipertensivas</strong> e <strong>arritmias graves</strong>.
-          </p>
-
-          <p>
-            Já os <strong>ISRS</strong> e <strong>IRSN</strong>, embora menos críticos nesse aspecto, podem interferir na
-            recaptação de <strong>serotonina</strong> e <strong>noradrenalina</strong>, elevando a excitabilidade neuronal e
-            facilitando convulsões em casos de toxicidade sistêmica.
-          </p>
-
-          <div class="destaque-frase">
-            <strong>Recomendação prática:</strong>
-            evitar altas doses de vasoconstritores em pacientes sob antidepressivos e preferir
-            <strong>anestésicos sem adrenalina</strong> sempre que possível.
           </div>
-        </article>
-
-        <!-- CARD: ANTI-HIPERTENSIVOS -->
-        <article class="card-interacao">
-          <header class="cabecalho-card">
-            <div class="titulo-card">
-              <h3>Interações com Anti-hipertensivos</h3>
-            </div>
-            <span class="chip">Pressão & Ritmo</span>
-          </header>
-
-          <p>
-            <strong>Beta-bloqueadores não seletivos</strong> reduzem a capacidade de compensação cardiovascular frente à
-            adrenalina, favorecendo <strong>bradicardia</strong> e <strong>hipertensão paradoxal</strong>.
-          </p>
-
-          <p>
-            <strong>Bloqueadores de canais de cálcio</strong> e <strong>diuréticos</strong> somam efeitos hipotensores, com risco aumentado
-            de <strong>síncope</strong> durante o procedimento. <strong>IECA</strong> e <strong>BRAs</strong> podem contribuir para
-            <strong>hipotensão severa</strong> em quadros de toxicidade sistêmica por anestésicos locais.
-          </p>
-
-          <div class="destaque-frase">
-            <strong>Recomendação prática:</strong>
-            monitorar pressão arterial e frequência cardíaca, ajustando cuidadosamente as doses de
-            <strong>vasoconstritores</strong> em pacientes hipertensos.
-          </div>
-        </article>
-
-        <!-- CARD: ANTICONVULSIVANTES E ANSIOLÍTICOS -->
-        <article class="card-interacao">
-          <header class="cabecalho-card">
-            <div class="titulo-card">
-              <h3>Anticonvulsivantes & Ansiolíticos</h3>
-            </div>
-            <span class="chip">Metabolismo & Sinais</span>
-          </header>
-
-          <p>
-            Anticonvulsivantes como <strong>carbamazepina</strong> e <strong>fenitoína</strong> induzem enzimas hepáticas, acelerando
-            o metabolismo de anestésicos locais do tipo <strong>amida</strong> e reduzindo sua eficácia clínica.
-          </p>
-
-          <p>
-            <strong>Benzodiazepínicos</strong> e <strong>barbitúricos</strong> podem mascarar sinais iniciais de toxicidade neurológica
-            (agitação, tremores), atrasando o reconhecimento da <strong>LAST (Local Anesthetic Systemic Toxicity)</strong>.
-          </p>
-
-          <div class="destaque-frase">
-            <strong>Recomendação prática:</strong>
-            considerar ajuste de dose em pacientes sob anticonvulsivantes e manter vigilância clínica rigorosa
-            em usuários de ansiolíticos sedativos.
-          </div>
-        </article>
-
-
-
-
-        
-        <!-- CARD: ANTIBIÓTICOS E ANALGÉSICOS -->
-        <article class="card-interacao">
-          <header class="cabecalho-card">
-            <div class="titulo-card">
-              <h3>Antibióticos & Analgésicos</h3>
-            </div>
-            <span class="chip">Metabolismo & Risco</span>
-          </header>
-
-          <p>
-            <strong>Macrolídeos</strong> (como eritromicina) inibem o metabolismo hepático das <strong>amidas</strong>, elevando o risco de
-            <strong>toxicidade sistêmica</strong>. As <strong>fluoroquinolonas</strong> reduzem o limiar convulsivo, facilitando crises
-            epilépticas na presença de altas doses de anestésicos locais.
-          </p>
-
-          <p>
-            Entre os analgésicos, <strong>opioides</strong> somam depressão respiratória e sedação, enquanto <strong>AINEs</strong> podem
-            aumentar o sangramento em áreas muito vascularizadas, favorecendo a <strong>absorção sistêmica</strong> do anestésico.
-          </p>
-
-          <div class="destaque-frase">
-            <strong>Recomendação prática:</strong>
-            evitar associar anestésicos locais com macrolídeos em pacientes de alto risco e observar atentamente
-            sinais neurológicos em usuários de fluoroquinolonas.
-          </div>
-        </article>
-<!-- CARD: ANTIARRÍTMICOS & ANESTESIA SISTÊMICA -->
-<article class="card-interacao">
-  <header class="cabecalho-card">
-    <div class="titulo-card">
-      <h3>Antiarrítmicos & Anestesia Sistêmica</h3>
-    </div>
-    <span class="chip">Cardiotoxicidade</span>
-  </header>
-
-  <p>
-    Antiarrítmicos da <strong>classe I</strong> (como quinidina e procainamida) somam o bloqueio de
-    <strong>canais de sódio</strong> promovido pelos anestésicos locais, aumentando o risco de
-    <strong>bloqueio de condução</strong>, depressão do automatismo e <strong>arritmias graves</strong>.
-  </p>
-
-  <p>
-    A <strong>amiodarona</strong> intensifica a depressão da condução cardíaca e pode agravar
-    <strong>bradicardia</strong> e <strong>hipotensão</strong>. Em contexto de anestesia sistêmica, fármacos como
-    <strong>propofol, opioides e anestésicos inalados</strong> somam efeito depressor sobre o sistema cardiovascular
-    e o SNC, tornando a <strong>toxicidade sistêmica dos anestésicos locais</strong> mais grave quando ela ocorre.
-  </p>
-
-  <div class="destaque-frase">
-    <strong>Recomendação prática:</strong>
-    em pacientes cardiopatas, priorizar anestésicos <strong>menos cardiotóxicos</strong> (como a ropivacaína),
-    evitar doses e volumes elevados de <strong>bupivacaína</strong> e monitorar continuamente ritmo cardíaco
-    e pressão arterial durante o procedimento.
   </div>
-</article>
-      </div> <!-- fim .grid-interacoes -->
+          <!-- GRADE PRINCIPAL DE INTERAÇÕES -->
+          <div class="grid-interacoes">
+
+            <!-- CARD: ANTIDEPRESSIVOS -->
+            <article class="card-interacao">
+              <header class="cabecalho-card">
+                <div class="titulo-card">
+                  <h3>Interações com Antidepressivos</h3>
+                </div>
+                <span class="chip">SNC & CV</span>
+              </header>
+
+              <p>
+                Tricíclicos e inibidores da monoaminoxidase (<strong>IMAO</strong>) podem aumentar a sensibilidade dos
+                receptores adrenérgicos, intensificando os efeitos da <strong>adrenalina</strong> presente nas soluções
+                anestésicas. Isso favorece <strong>crises hipertensivas</strong> e <strong>arritmias graves</strong>.
+              </p>
+
+              <p>
+                Já os <strong>ISRS</strong> e <strong>IRSN</strong>, embora menos críticos nesse aspecto, podem
+                interferir na
+                recaptação de <strong>serotonina</strong> e <strong>noradrenalina</strong>, elevando a excitabilidade
+                neuronal e
+                facilitando convulsões em casos de toxicidade sistêmica.
+              </p>
+
+              <div class="destaque-frase">
+                <strong>Recomendação prática:</strong>
+                evitar altas doses de vasoconstritores em pacientes sob antidepressivos e preferir
+                <strong>anestésicos sem adrenalina</strong> sempre que possível.
+              </div>
+            </article>
+
+            <!-- CARD: ANTI-HIPERTENSIVOS -->
+            <article class="card-interacao">
+              <header class="cabecalho-card">
+                <div class="titulo-card">
+                  <h3>Interações com Anti-hipertensivos</h3>
+                </div>
+                <span class="chip">Pressão & Ritmo</span>
+              </header>
+
+              <p>
+                <strong>Beta-bloqueadores não seletivos</strong> reduzem a capacidade de compensação cardiovascular
+                frente à
+                adrenalina, favorecendo <strong>bradicardia</strong> e <strong>hipertensão paradoxal</strong>.
+              </p>
+
+              <p>
+                <strong>Bloqueadores de canais de cálcio</strong> e <strong>diuréticos</strong> somam efeitos
+                hipotensores, com risco aumentado
+                de <strong>síncope</strong> durante o procedimento. <strong>IECA</strong> e <strong>BRAs</strong> podem
+                contribuir para
+                <strong>hipotensão severa</strong> em quadros de toxicidade sistêmica por anestésicos locais.
+              </p>
+
+              <div class="destaque-frase">
+                <strong>Recomendação prática:</strong>
+                monitorar pressão arterial e frequência cardíaca, ajustando cuidadosamente as doses de
+                <strong>vasoconstritores</strong> em pacientes hipertensos.
+              </div>
+            </article>
+
+            <!-- CARD: ANTICONVULSIVANTES E ANSIOLÍTICOS -->
+            <article class="card-interacao">
+              <header class="cabecalho-card">
+                <div class="titulo-card">
+                  <h3>Anticonvulsivantes & Ansiolíticos</h3>
+                </div>
+                <span class="chip">Metabolismo & Sinais</span>
+              </header>
+
+              <p>
+                Anticonvulsivantes como <strong>carbamazepina</strong> e <strong>fenitoína</strong> induzem enzimas
+                hepáticas, acelerando
+                o metabolismo de anestésicos locais do tipo <strong>amida</strong> e reduzindo sua eficácia clínica.
+              </p>
+
+              <p>
+                <strong>Benzodiazepínicos</strong> e <strong>barbitúricos</strong> podem mascarar sinais iniciais de
+                toxicidade neurológica
+                (agitação, tremores), atrasando o reconhecimento da <strong>LAST (Local Anesthetic Systemic
+                  Toxicity)</strong>.
+              </p>
+
+              <div class="destaque-frase">
+                <strong>Recomendação prática:</strong>
+                considerar ajuste de dose em pacientes sob anticonvulsivantes e manter vigilância clínica rigorosa
+                em usuários de ansiolíticos sedativos.
+              </div>
+            </article>
 
 
 
 
-        <!-- TÍTULO NOVA SEÇÃO (MAIS LARGO) -->
-    <header class="header-secao">
-      <h1 class="titulo-secao">Interações com Outras Classes Farmacológicas</h1>
-    </header>
-    <br>
 
-    <!-- DOIS CARDS LADO A LADO, ROLÁVEIS -->
-    <div class="wrapper-classes">
-      <!-- CARD 1: OUTRAS CLASSES RELEVANTES -->
-      <section class="scroll-container" data-scrollbar>
-        <div class="scroll-content">
-          <h2>Outras Classes Relevantes</h2>
-          <p>
-            Diversos fármacos de uso crônico podem <strong>modificar a segurança</strong> dos anestésicos locais,
-            seja por efeitos cardiovasculares, metabólicos, hemodinâmicos ou sobre o sistema nervoso central.
-          </p>
+            <!-- CARD: ANTIBIÓTICOS E ANALGÉSICOS -->
+            <article class="card-interacao">
+              <header class="cabecalho-card">
+                <div class="titulo-card">
+                  <h3>Antibióticos & Analgésicos</h3>
+                </div>
+                <span class="chip">Metabolismo & Risco</span>
+              </header>
 
-          <h3>Antipsicóticos</h3>
-          <p>
-            <strong>Antipsicóticos</strong> podem prolongar o intervalo <strong>QT</strong> e alterar a condução elétrica cardíaca,
-            aumentando o risco de <strong>arritmias ventriculares</strong> quando associados a anestésicos locais,
-            sobretudo em pacientes com cardiopatias prévias ou em uso concomitante de outros fármacos que também
-            prolongam o QT.
-          </p>
+              <p>
+                <strong>Macrolídeos</strong> (como eritromicina) inibem o metabolismo hepático das
+                <strong>amidas</strong>, elevando o risco de
+                <strong>toxicidade sistêmica</strong>. As <strong>fluoroquinolonas</strong> reduzem o limiar convulsivo,
+                facilitando crises
+                epilépticas na presença de altas doses de anestésicos locais.
+              </p>
 
-          <h3>Antidiabéticos</h3>
-          <p>
-            Em pacientes em uso de <strong>antidiabéticos</strong>, a presença de <strong>adrenalina</strong> nas soluções anestésicas
-            pode elevar a glicemia, exigindo <strong>monitorização mais rigorosa</strong> e eventual ajuste da terapia
-            hipoglicemiante, principalmente em diabéticos mal controlados ou insulinodependentes.
-          </p>
+              <p>
+                Entre os analgésicos, <strong>opioides</strong> somam depressão respiratória e sedação, enquanto
+                <strong>AINEs</strong> podem
+                aumentar o sangramento em áreas muito vascularizadas, favorecendo a <strong>absorção sistêmica</strong>
+                do anestésico.
+              </p>
 
-          <h3>Anticoagulantes e Antiagregantes</h3>
-          <p>
-            <strong>Anticoagulantes</strong> e <strong>antiagregantes plaquetários</strong> aumentam o risco de formação de
-            <strong>hematomas</strong> em áreas de grande vascularização ou em bloqueios regionais profundos.
-          </p>
-          <p>
-            Esses hematomas podem favorecer maior <strong>absorção sistêmica do anestésico local</strong>, elevando a chance
-            de toxicidade, especialmente quando são utilizadas doses mais altas ou técnicas profundas.
-          </p>
+              <div class="destaque-frase">
+                <strong>Recomendação prática:</strong>
+                evitar associar anestésicos locais com macrolídeos em pacientes de alto risco e observar atentamente
+                sinais neurológicos em usuários de fluoroquinolonas.
+              </div>
+            </article>
+            <!-- CARD: ANTIARRÍTMICOS & ANESTESIA SISTÊMICA -->
+            <article class="card-interacao">
+              <header class="cabecalho-card">
+                <div class="titulo-card">
+                  <h3>Antiarrítmicos & Anestesia Sistêmica</h3>
+                </div>
+                <span class="chip">Cardiotoxicidade</span>
+              </header>
 
-          <h3>Descongestionantes simpaticomiméticos</h3>
-          <p>
-            O uso de <strong>descongestionantes simpaticomiméticos</strong> (como alguns fármacos nasais ou orais) somado à
-            <strong>adrenalina</strong> dos anestésicos locais pode intensificar efeitos de <strong>hipertensão</strong> e
-            <strong>taquicardia</strong>, principalmente em pacientes hipertensos ou com doença cardiovascular estabelecida.
-          </p>
+              <p>
+                Antiarrítmicos da <strong>classe I</strong> (como quinidina e procainamida) somam o bloqueio de
+                <strong>canais de sódio</strong> promovido pelos anestésicos locais, aumentando o risco de
+                <strong>bloqueio de condução</strong>, depressão do automatismo e <strong>arritmias graves</strong>.
+              </p>
 
-          <h3>Anti-histamínicos sedativos</h3>
-          <p>
-            Os <strong>anti-histamínicos sedativos</strong> (como alguns anti-alérgicos de primeira geração) possuem efeito
-            depressor sobre o <strong>SNC</strong>. Em combinação com anestésicos locais, podem potencializar
-            <strong>sonolência</strong>, <strong>confusão mental</strong> e dificultar a percepção precoce de sinais de
-            <strong>toxicidade neurológica</strong>.
-          </p>
+              <p>
+                A <strong>amiodarona</strong> intensifica a depressão da condução cardíaca e pode agravar
+                <strong>bradicardia</strong> e <strong>hipotensão</strong>. Em contexto de anestesia sistêmica, fármacos
+                como
+                <strong>propofol, opioides e anestésicos inalados</strong> somam efeito depressor sobre o sistema
+                cardiovascular
+                e o SNC, tornando a <strong>toxicidade sistêmica dos anestésicos locais</strong> mais grave quando ela
+                ocorre.
+              </p>
 
-          <h2>Recomendação prática</h2>
-          <p>
-            Antes de realizar bloqueios com anestésicos locais, é fundamental revisar cuidadosamente a
-            <strong>medicação em uso</strong>, identificando fármacos que aumentem o risco de:
-          </p>
-          <ul>
-            <li><strong>Arritmias</strong> (antipsicóticos, fármacos que prolongam QT).</li>
-            <li><strong>Sangramento e hematomas</strong> (anticoagulantes e antiagregantes).</li>
-            <li><strong>Alteração glicêmica</strong> (antidiabéticos associados à adrenalina).</li>
-            <li><strong>Depressão do SNC</strong> (anti-histamínicos sedativos e outros depressores).</li>
-            <li><strong>Hipertensão e taquicardia</strong> (descongestionantes simpaticomiméticos + adrenalina).</li>
-          </ul>
+              <div class="destaque-frase">
+                <strong>Recomendação prática:</strong>
+                em pacientes cardiopatas, priorizar anestésicos <strong>menos cardiotóxicos</strong> (como a
+                ropivacaína),
+                evitar doses e volumes elevados de <strong>bupivacaína</strong> e monitorar continuamente ritmo cardíaco
+                e pressão arterial durante o procedimento.
+              </div>
+            </article>
+          </div> <!-- fim .grid-interacoes -->
 
-          <p>
-            Em pacientes com <strong>múltiplas comorbidades</strong>, priorizar
-            <strong>doses mais conservadoras</strong>, técnicas menos invasivas e
-            <strong>monitorização clínica intensa</strong> durante e após o procedimento.
-          </p>
+
+
+
+          <!-- TÍTULO NOVA SEÇÃO (MAIS LARGO) -->
+          <header class="header-secao">
+            <h1 class="titulo-secao">Interações com Outras Classes Farmacológicas</h1>
+          </header>
+          <br>
+
+          <!-- DOIS CARDS LADO A LADO, ROLÁVEIS -->
+          <div class="wrapper-classes">
+            <!-- CARD 1: OUTRAS CLASSES RELEVANTES -->
+            <section class="scroll-container" data-scrollbar>
+              <div class="scroll-content">
+                <h2>Outras Classes Relevantes</h2>
+                <p>
+                  Diversos fármacos de uso crônico podem <strong>modificar a segurança</strong> dos anestésicos locais,
+                  seja por efeitos cardiovasculares, metabólicos, hemodinâmicos ou sobre o sistema nervoso central.
+                </p>
+
+                <h3>Antipsicóticos</h3>
+                <p>
+                  <strong>Antipsicóticos</strong> podem prolongar o intervalo <strong>QT</strong> e alterar a condução
+                  elétrica cardíaca,
+                  aumentando o risco de <strong>arritmias ventriculares</strong> quando associados a anestésicos locais,
+                  sobretudo em pacientes com cardiopatias prévias ou em uso concomitante de outros fármacos que também
+                  prolongam o QT.
+                </p>
+
+                <h3>Antidiabéticos</h3>
+                <p>
+                  Em pacientes em uso de <strong>antidiabéticos</strong>, a presença de <strong>adrenalina</strong> nas
+                  soluções anestésicas
+                  pode elevar a glicemia, exigindo <strong>monitorização mais rigorosa</strong> e eventual ajuste da
+                  terapia
+                  hipoglicemiante, principalmente em diabéticos mal controlados ou insulinodependentes.
+                </p>
+
+                <h3>Anticoagulantes e Antiagregantes</h3>
+                <p>
+                  <strong>Anticoagulantes</strong> e <strong>antiagregantes plaquetários</strong> aumentam o risco de
+                  formação de
+                  <strong>hematomas</strong> em áreas de grande vascularização ou em bloqueios regionais profundos.
+                </p>
+                <p>
+                  Esses hematomas podem favorecer maior <strong>absorção sistêmica do anestésico local</strong>,
+                  elevando a chance
+                  de toxicidade, especialmente quando são utilizadas doses mais altas ou técnicas profundas.
+                </p>
+
+                <h3>Descongestionantes simpaticomiméticos</h3>
+                <p>
+                  O uso de <strong>descongestionantes simpaticomiméticos</strong> (como alguns fármacos nasais ou orais)
+                  somado à
+                  <strong>adrenalina</strong> dos anestésicos locais pode intensificar efeitos de
+                  <strong>hipertensão</strong> e
+                  <strong>taquicardia</strong>, principalmente em pacientes hipertensos ou com doença cardiovascular
+                  estabelecida.
+                </p>
+
+                <h3>Anti-histamínicos sedativos</h3>
+                <p>
+                  Os <strong>anti-histamínicos sedativos</strong> (como alguns anti-alérgicos de primeira geração)
+                  possuem efeito
+                  depressor sobre o <strong>SNC</strong>. Em combinação com anestésicos locais, podem potencializar
+                  <strong>sonolência</strong>, <strong>confusão mental</strong> e dificultar a percepção precoce de
+                  sinais de
+                  <strong>toxicidade neurológica</strong>.
+                </p>
+
+                <h2>Recomendação prática</h2>
+                <p>
+                  Antes de realizar bloqueios com anestésicos locais, é fundamental revisar cuidadosamente a
+                  <strong>medicação em uso</strong>, identificando fármacos que aumentem o risco de:
+                </p>
+                <ul>
+                  <li><strong>Arritmias</strong> (antipsicóticos, fármacos que prolongam QT).</li>
+                  <li><strong>Sangramento e hematomas</strong> (anticoagulantes e antiagregantes).</li>
+                  <li><strong>Alteração glicêmica</strong> (antidiabéticos associados à adrenalina).</li>
+                  <li><strong>Depressão do SNC</strong> (anti-histamínicos sedativos e outros depressores).</li>
+                  <li><strong>Hipertensão e taquicardia</strong> (descongestionantes simpaticomiméticos + adrenalina).
+                  </li>
+                </ul>
+
+                <p>
+                  Em pacientes com <strong>múltiplas comorbidades</strong>, priorizar
+                  <strong>doses mais conservadoras</strong>, técnicas menos invasivas e
+                  <strong>monitorização clínica intensa</strong> durante e após o procedimento.
+                </p>
+              </div>
+            </section>
+
+          </div> <!-- fim .wrapper-classes -->
+
+        </div>
+        <!-- BLOCO EXTRA DE RESUMO FINAL -->
+        <section class="bloco-extra" style="margin-top: 25px;">
+          <div class="card-extra">
+            <h3>Checklist Rápido para o Cirurgião-Dentista</h3>
+            <ul class="lista-passos">
+              <li>1. Revisar <strong>história medicamentosa</strong> completa do paciente.</li>
+              <li>2. Identificar uso de antidepressivos, antiarrítmicos, antibióticos e anticonvulsivantes.</li>
+              <li>3. Ajustar dose de <strong>anestésico</strong> e de <strong>vasoconstritor</strong>, conforme o risco.
+              </li>
+              <li>4. Monitorar sinais vitais durante todo o procedimento.</li>
+              <li>5. Estar preparado para reconhecer e manejar precocemente a <strong>LAST</strong>.</li>
+            </ul>
+          </div>
+
+          <div class="card-extra">
+            <h3>Foco na Segurança do Paciente</h3>
+            <p>
+              A compreensão das interações medicamentosas com anestésicos locais é essencial para reduzir
+              eventos adversos e garantir um atendimento odontológico mais seguro, sobretudo em pacientes
+              polimedicados e com comorbidades cardiovasculares ou neurológicas.
+            </p>
+          </div>
+        </section>
+
         </div>
       </section>
-
-    </div> <!-- fim .wrapper-classes -->
-
-  </div>
-      <!-- BLOCO EXTRA DE RESUMO FINAL -->
-      <section class="bloco-extra" style="margin-top: 25px;">
-        <div class="card-extra">
-          <h3>Checklist Rápido para o Cirurgião-Dentista</h3>
-          <ul class="lista-passos">
-            <li>1. Revisar <strong>história medicamentosa</strong> completa do paciente.</li>
-            <li>2. Identificar uso de antidepressivos, antiarrítmicos, antibióticos e anticonvulsivantes.</li>
-            <li>3. Ajustar dose de <strong>anestésico</strong> e de <strong>vasoconstritor</strong>, conforme o risco.</li>
-            <li>4. Monitorar sinais vitais durante todo o procedimento.</li>
-            <li>5. Estar preparado para reconhecer e manejar precocemente a <strong>LAST</strong>.</li>
-          </ul>
-        </div>
-
-        <div class="card-extra">
-          <h3>Foco na Segurança do Paciente</h3>
-          <p>
-            A compreensão das interações medicamentosas com anestésicos locais é essencial para reduzir
-            eventos adversos e garantir um atendimento odontológico mais seguro, sobretudo em pacientes
-            polimedicados e com comorbidades cardiovasculares ou neurológicas.
-          </p>
-        </div>
-      </section>
-
-    </div>
-  </section>
       <!-- 
         - #OFFER
       -->
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-      <script src="grafico.js"></script></div>
+      <script src="grafico.js"></script>
+      </div>
       <section class="section offer" id="offer" aria-label="offer" data-section>
         <div class="container">
 
           <figure class="offer-banner">
-            <img src="https://eapgoias.com.br/wp-content/uploads/2023/11/anestesia-dentista-3.jpg" width="305" height="408" loading="lazy" alt="offer products"
-              class="w-100">
+            <img src="https://eapgoias.com.br/wp-content/uploads/2023/11/anestesia-dentista-3.jpg" width="305"
+              height="408" loading="lazy" alt="offer products" class="w-100">
 
-            <img src="Cópia de Post Instagram Dia do Publicitário Publicidade Propaganda Amarelo Criativo.png"450" height="625" loading="lazy" alt="offer products"
-              class="w-100">
+            <img src="Cópia de Post Instagram Dia do Publicitário Publicidade Propaganda Amarelo Criativo.png" 450"
+              height="625" loading="lazy" alt="offer products" class="w-100">
           </figure>
 
           <div class="offer-content">
@@ -1046,7 +1148,7 @@ O responsável pelo quadro clínico deve se atentar e registrar qualquer mudanç
             <h2 class="h2-large section-title">Conheça mais!</h2>
 
             <p class="section-text">
-              Fortaleça seus conhecimentos sobre o assunto! Acesse nosso Flashcard e aprenda mais!!. 
+              Fortaleça seus conhecimentos sobre o assunto! Acesse nosso Flashcard e aprenda mais!!.
             </p>
 
             <div class="countdown">
@@ -1069,72 +1171,76 @@ O responsável pelo quadro clínico deve se atentar e registrar qualquer mudanç
 
 
 
-     <h2>Artigos de Site:</h2>
+      <h2>Artigos de Site:</h2>
 
-<div class="reference">
-  SOUZA, A. R.; et al. 
-  <i>Antidepressivos e anestésicos locais: interações medicamentosas de interesse odontológico.</i> 
-  RSBO (Revista Sul-Brasileira de Odontologia), 2010. 
-  Disponível em: 
-  <a href="http://revodonto.bvsalud.org/scielo.php?script=sci_arttext&pid=S1984-56852010000400014" target="_blank">
-    http://revodonto.bvsalud.org/scielo.php?script=sci_arttext&pid=S1984-56852010000400014
-  </a>. 
-  Acesso em: 16 nov. 2025.
-</div>
+      <div class="reference">
+        SOUZA, A. R.; et al.
+        <i>Antidepressivos e anestésicos locais: interações medicamentosas de interesse odontológico.</i>
+        RSBO (Revista Sul-Brasileira de Odontologia), 2010.
+        Disponível em:
+        <a href="http://revodonto.bvsalud.org/scielo.php?script=sci_arttext&pid=S1984-56852010000400014"
+          target="_blank">
+          http://revodonto.bvsalud.org/scielo.php?script=sci_arttext&pid=S1984-56852010000400014
+        </a>.
+        Acesso em: 16 nov. 2025.
+      </div>
 
-<div class="reference">
-  <div>
-    VARGAS, I. 
-    <i>Antidepressivos e Anestesia: uma análise clínica.</i> 
-    Ivan Vargas – Anestesia. [S. l.], [s. d.]. 
-    Disponível em: 
-    <a href="https://ivanvargas.com.br/interacao-antidepressivos-anestesia/" target="_blank">
-      https://ivanvargas.com.br/interacao-antidepressivos-anestesia/
-    </a>. 
-    Acesso em: 16 nov. 2025.
-  </div>
-</div>
+      <div class="reference">
+        <div>
+          VARGAS, I.
+          <i>Antidepressivos e Anestesia: uma análise clínica.</i>
+          Ivan Vargas – Anestesia. [S. l.], [s. d.].
+          Disponível em:
+          <a href="https://ivanvargas.com.br/interacao-antidepressivos-anestesia/" target="_blank">
+            https://ivanvargas.com.br/interacao-antidepressivos-anestesia/
+          </a>.
+          Acesso em: 16 nov. 2025.
+        </div>
+      </div>
 
-<div class="reference">
-  <div>
-    ANESTESIE ODONTOLOGIA. 
-    <i>Possíveis interações medicamentosas entre antidepressivos e anestésicos locais.</i> 
-    [S. l.], [s. d.]. 
-    Disponível em: 
-    <a href="https://www.anestesie.com.br/possiveis-interacoes-medicamentosas-entre-antidepressivos-e-anestesicos-locais/" target="_blank">
-      https://www.anestesie.com.br/possiveis-interacoes-medicamentosas-entre-antidepressivos-e-anestesicos-locais/
-    </a>. 
-    Acesso em: 16 nov. 2025.
-  </div>
-</div>
+      <div class="reference">
+        <div>
+          ANESTESIE ODONTOLOGIA.
+          <i>Possíveis interações medicamentosas entre antidepressivos e anestésicos locais.</i>
+          [S. l.], [s. d.].
+          Disponível em:
+          <a href="https://www.anestesie.com.br/possiveis-interacoes-medicamentosas-entre-antidepressivos-e-anestesicos-locais/"
+            target="_blank">
+            https://www.anestesie.com.br/possiveis-interacoes-medicamentosas-entre-antidepressivos-e-anestesicos-locais/
+          </a>.
+          Acesso em: 16 nov. 2025.
+        </div>
+      </div>
 
-<div class="reference">
-  <div>
-    REVISTA F&amp;T. 
-    <i>Anestésicos locais e suas principais complicações.</i> 
-    [S. l.], [s. d.]. 
-    Disponível em: 
-    <a href="https://revistaft.com.br/anestesicos-locais-e-suas-principais-complicacoes-e-tratamento-uma-revisao-cientifica/" target="_blank">
-      https://revistaft.com.br/anestesicos-locais-e-suas-principais-complicacoes-e-tratamento-uma-revisao-cientifica/
-    </a>. 
-    Acesso em: 16 nov. 2025.
-  </div>
-</div>
+      <div class="reference">
+        <div>
+          REVISTA F&amp;T.
+          <i>Anestésicos locais e suas principais complicações.</i>
+          [S. l.], [s. d.].
+          Disponível em:
+          <a href="https://revistaft.com.br/anestesicos-locais-e-suas-principais-complicacoes-e-tratamento-uma-revisao-cientifica/"
+            target="_blank">
+            https://revistaft.com.br/anestesicos-locais-e-suas-principais-complicacoes-e-tratamento-uma-revisao-cientifica/
+          </a>.
+          Acesso em: 16 nov. 2025.
+        </div>
+      </div>
 
-<h2>Artigo Científico:</h2>
+      <h2>Artigo Científico:</h2>
 
-<div class="reference">
-  <div>
-    REVISTA BRASILEIRA DE ANESTESIOLOGIA. 
-    <i>Interações medicamentosas na anestesia regional.</i> 
-    Revista Brasileira de Anestesiologia, [S. l.], [s. d.]. 
-    Disponível em: 
-    <a href="http://www.rba.periodikos.com.br/article/5e498bc70aec5119028b47ca/pdf/rba-44-1-95.pdf" target="_blank">
-      http://www.rba.periodikos.com.br/article/5e498bc70aec5119028b47ca/pdf/rba-44-1-95.pdf
-    </a>. 
-    Acesso em: 16 nov. 2025.
-  </div>
-</div>
+      <div class="reference">
+        <div>
+          REVISTA BRASILEIRA DE ANESTESIOLOGIA.
+          <i>Interações medicamentosas na anestesia regional.</i>
+          Revista Brasileira de Anestesiologia, [S. l.], [s. d.].
+          Disponível em:
+          <a href="http://www.rba.periodikos.com.br/article/5e498bc70aec5119028b47ca/pdf/rba-44-1-95.pdf"
+            target="_blank">
+            http://www.rba.periodikos.com.br/article/5e498bc70aec5119028b47ca/pdf/rba-44-1-95.pdf
+          </a>.
+          Acesso em: 16 nov. 2025.
+        </div>
+      </div>
     </article>
   </main>
 
@@ -1147,26 +1253,25 @@ O responsável pelo quadro clínico deve se atentar e registrar qualquer mudanç
   -->
 
   <footer class="footer">
-    <img class="unp" 
-    src="unp-removebg-preview.png" alt="UNP Logo">
+    <img class="unp" src="unp-removebg-preview.png" alt="UNP Logo">
     <div class="footer-content">
-      
+
       <ul class="team-list">
         <li class="team-member">Fabiano Medeiros - Odontologia</li>
-<li class="team-member">Igor de Lima Alves - Odontologia</li>
-<li class="team-member">João Vitor Morais de Figueiredo - Odontologia</li>
-<li class="team-member">Letícia Silva Cardoso - Odontologia</li>
-<li class="team-member">Luiz Felipe Carvalho da Silva - Odontologia</li>
-<li class="team-member">Maria das Vitórias da Costa Araújo - Odontologia</li>
-<li class="team-member">Maria Eduarda Lira Nelo de Oliveira - Odontologia</li>
-<li class="team-member">Pedro Henrique Rodrigues da Silva - Odontologia</li>
-<li class="team-member">Roana Priscila Silva da Costa - Odontologia</li>
-<li class="team-member">Solon Fellipe Lopes Marlos - Odontologia</li>
-<li class="team-member">Tatiana Vanesa da Silva Dantas - Odontologia</li>
+        <li class="team-member">Igor de Lima Alves - Odontologia</li>
+        <li class="team-member">João Vitor Morais de Figueiredo - Odontologia</li>
+        <li class="team-member">Letícia Silva Cardoso - Odontologia</li>
+        <li class="team-member">Luiz Felipe Carvalho da Silva - Odontologia</li>
+        <li class="team-member">Maria das Vitórias da Costa Araújo - Odontologia</li>
+        <li class="team-member">Maria Eduarda Lira Nelo de Oliveira - Odontologia</li>
+        <li class="team-member">Pedro Henrique Rodrigues da Silva - Odontologia</li>
+        <li class="team-member">Roana Priscila Silva da Costa - Odontologia</li>
+        <li class="team-member">Solon Fellipe Lopes Marlos - Odontologia</li>
+        <li class="team-member">Tatiana Vanesa da Silva Dantas - Odontologia</li>
 
       </ul><br><br>
     </div>
-    </footer>
+  </footer>
 
 
 
