@@ -1,3 +1,96 @@
+/* ===== TABELA DE INTERAÇÕES ===== */
+
+#tabela-interacoes {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 24px auto;
+  font-size: 14px;
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 14px 40px rgba(15, 23, 42, 0.15);
+}
+
+/* Cabeçalho */
+#tabela-interacoes thead th {
+  padding: 10px 12px;
+  background: hsl(212, 61%, 54%);
+  color: #f9fafb;
+  text-align: left;
+}
+
+#tabela-interacoes thead tr:first-child th {
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: #111827;
+}
+
+/* Corpo da tabela */
+#tabela-interacoes tbody td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #e5e7eb;
+  vertical-align: top;
+  color: #111827;
+}
+
+/* Colunas mais estreitas/largas se quiser */
+#tabela-interacoes tbody td:nth-child(1) {
+  width: 15%;
+  font-weight: 600;
+}
+
+#tabela-interacoes tbody td:nth-child(2) {
+  width: 25%;
+  font-weight: 500;
+}
+
+#tabela-interacoes tbody td:nth-child(3),
+#tabela-interacoes tbody td:nth-child(4) {
+  width: 30%;
+}
+
+/* Listras */
+#tabela-interacoes tbody tr:nth-child(even) {
+  background: #f9fafb;
+}
+
+/* Hover para ficar “dinâmico” */
+#tabela-interacoes tbody tr {
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+#tabela-interacoes tbody tr:hover {
+  background: #eef2ff;
+  transform: translateY(-1px);
+}
+
+/* Tags de destaque dentro da tabela, se quiser usar <strong> */
+#tabela-interacoes strong {
+  color: #0f766e;
+}
+
+/* Responsivo: rolagem horizontal em telas pequenas */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Coloque a tabela dentro de uma div.table-wrapper no HTML:
+   <div class="table-wrapper">
+     <table id="tabela-interacoes">...</table>
+   </div>
+*/
+@media (max-width: 700px) {
+  #tabela-interacoes {
+    font-size: 12px;
+  }
+
+  #tabela-interacoes thead tr:first-child th {
+    font-size: 12px;
+  }
+}
 /* --- Estilos Básicos Aprimorados --- */
 
 /* --- GRID BÁSICA (ajuste se já tiver) --- */
@@ -51,7 +144,7 @@
 
 /* quando card tiver classe .expandido, mostra tudo */
 .card-interacao.expandido p {
-  max-height: 2500px;         /* bem alto pra comportar textos grandes */
+  max-height: 3200px;         /* bem alto pra comportar textos grandes */
 }
 
 /* degradê no final indicando que tem mais texto (quando NÃO estiver expandido) */
