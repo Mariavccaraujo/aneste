@@ -1,5 +1,133 @@
 /* --- Estilos Básicos Aprimorados --- */
 
+/* --- GRID BÁSICA (ajuste se já tiver) --- */
+.grid-interacoes {
+  display: grid;
+  gap: 16px;
+}
+
+/* Card básico */
+.card-interacao {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px 18px 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Cabeçalho do card */
+.cabecalho-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.cabecalho-card h3 {
+  font-size: 1.05rem;
+  line-height: 1.3;
+}
+
+/* Chip */
+.chip {
+  background: #e8f1ff;
+  color: #2454c5;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* --- COLAPSO DO TEXTO --- */
+.card-interacao p {
+  max-height: 400px;          /* altura "fechado" */
+  overflow: hidden;
+  position: relative;
+  transition: max-height 0.3s ease;
+}
+
+/* quando card tiver classe .expandido, mostra tudo */
+.card-interacao.expandido p {
+  max-height: 2500px;         /* bem alto pra comportar textos grandes */
+}
+
+/* degradê no final indicando que tem mais texto (quando NÃO estiver expandido) */
+.card-interacao:not(.expandido) p::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: linear-gradient(to top, #ffffff 60%, transparent);
+}
+
+/* quando expandido, remove o degradê */
+.card-interacao.expandido p::after {
+  display: none;
+}
+
+/* Destaque da frase prática */
+.destaque-frase {
+  background: #f5f7ff;
+  border-left: 3px solid #2454c5;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+/* --- BOTÃO LEIA MAIS / LEIA MENOS --- */
+.btn-leia-mais {
+  align-self: flex-start;
+  margin-top: 6px;
+  border: none;
+  background: #2454c5;
+  color: #ffffff;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.btn-leia-mais::after {
+  content: "▼";
+  font-size: 0.7rem;
+}
+
+/* Quando o card estiver expandido, muda o ícone do botão */
+.card-interacao.expandido .btn-leia-mais::after {
+  content: "▲";
+}
+
+.btn-leia-mais:hover {
+  background: #1a3f97;
+  transform: translateY(-1px);
+}
+
+.btn-leia-mais:active {
+  transform: translateY(0);
+}
+
+/* --- RESPONSIVO SIMPLES --- */
+@media (min-width: 820px) {
+  .grid-interacoes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1300px) {
+  .grid-interacoes {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
 
 /* ------------------ RESET SIMPLES ------------------ */
 *,
@@ -201,7 +329,7 @@ header p {
 .titulo-card h3{
     margin:0;
     /* Mantenho 25PX */
-    font-size:25PX; 
+    font-size:22PX; 
     color:#549cc1;
     /* Garante que o texto se encolha e não ultrapasse o contêiner */
     min-width: 0; 
