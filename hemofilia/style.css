@@ -1,3 +1,175 @@
+/* ========== GRID DE INTERAÇÕES ========== */
+
+.grid-interacoes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin: 20px 0;
+}
+
+/* ========== CARD GENÉRICO DE INTERAÇÃO ========== */
+
+.card-interacao {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 16px 16px 14px;
+  box-shadow: 0 5px 18px rgba(15, 23, 42, 0.06);
+  border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Cabeçalho do card */
+
+.cabecalho-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.titulo-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.tag-tipo {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: #ecfeff;
+  color: #155e75;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.titulo-card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #549cc1;
+  min-width: 0;
+}
+
+/* Chip lateral */
+
+.chip {
+  flex-shrink: 0;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: #ecfeff;
+  color: #155e75;
+  border: 1px solid #a5f3fc;
+  white-space: nowrap;
+}
+
+/* Texto do card */
+
+.card-interacao p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.55;
+}
+
+/* Destaque final */
+
+.destaque-frase {
+  font-size: 0.9rem;
+  padding: 8px 10px;
+  border-radius: 12px;
+  background: #f9fafb;
+  color: #1f2933;
+  border: 1px dashed #e5e7eb;
+}
+
+/* ========== LEIA MAIS / LEIA MENOS ========== */
+
+/* Começa com o texto "fechado" (altura limitada) */
+.card-interacao p {
+  max-height: 150px;
+  overflow: hidden;
+  position: relative;
+  transition: max-height 0.3s ease;
+}
+
+/* Quando o card ganha classe .expandido, mostra tudo */
+.card-interacao.expandido p {
+  max-height: 1000px;
+}
+
+/* Degradê no final quando NÃO está expandido */
+.card-interacao:not(.expandido) p::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: linear-gradient(to top, #ffffff 60%, transparent);
+}
+
+/* Remove degradê quando expandido */
+.card-interacao.expandido p::after {
+  display: none;
+}
+
+/* Botão Leia mais */
+
+.btn-leia-mais {
+  align-self: flex-start;
+  margin-top: 6px;
+  border: none;
+  background: #2454c5;
+  color: #ffffff;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.btn-leia-mais::after {
+  content: "▼";
+  font-size: 0.7rem;
+}
+
+/* Ícone muda quando card está expandido */
+.card-interacao.expandido .btn-leia-mais::after {
+  content: "▲";
+}
+
+.btn-leia-mais:hover {
+  background: #1a3f97;
+  transform: translateY(-1px);
+}
+
+.btn-leia-mais:active {
+  transform: translateY(0);
+}
+
+/* Responsivo: cabeçalho quebrando bonito no celular */
+@media (max-width: 500px) {
+  .cabecalho-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .chip {
+    align-self: flex-start;
+  }
+}
 /* ===== TABELA DE INTERAÇÕES ===== */
 /* Botão "voltar ao topo" */
 .btn-topo {
@@ -164,7 +336,14 @@
   display: grid;
   gap: 16px;
 }
+.card-interacao2 {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px 18px 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
 
+  gap: 12px;
+}
 /* Card básico */
 .card-interacao {
   background: #ffffff;
