@@ -1349,8 +1349,9 @@ Em contexto de anestesia sistêmica, fármacos como propofol, opioides e anesté
       </section>
 
 
-
-
+<button id="backToTop" class="btn-topo" aria-label="Voltar para o topo">
+  ↑
+</button>
 
 
       <h2>Artigos de Site:</h2>
@@ -1435,10 +1436,6 @@ Em contexto de anestesia sistêmica, fármacos como propofol, opioides e anesté
         MALAMED, S. F.
         <i>Manual de anestesia local.</i>
         6. ed. [S. l.]: Elsevier, [201x].
-        Disponível em:
-        <a href="file:///C:/Users/maria/Downloads/Manual%20de%20Anestesia%20Local%20Malamed%206%C2%AA%20Ed..pdf" target="_blank">
-          file:///C:/Users/maria/Downloads/Manual%20de%20Anestesia%20Local%20Malamed%206%C2%AA%20Ed..pdf
-        </a>.
         Acesso em: 16 nov. 2025.
       </div>
 
@@ -1568,6 +1565,24 @@ Em contexto de anestesia sistêmica, fármacos como propofol, opioides e anesté
     searchInput.addEventListener("input", applyFilters);
     filterTipo.addEventListener("change", applyFilters);
   </script>
+<script>
+  const backToTopBtn = document.getElementById('backToTop');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      backToTopBtn.classList.add('ativo');
+    } else {
+      backToTopBtn.classList.remove('ativo');
+    }
+  });
+
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+</script>
 
 </body>
 
