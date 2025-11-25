@@ -174,7 +174,7 @@
 /* Botão "voltar ao topo" */
 .btn-topo {
   position: fixed;
-  right: 20px;
+  left: 20px;    /* <-- troquei right por left */
   bottom: 20px;
 
   width: 48px;
@@ -196,7 +196,6 @@
   cursor: pointer;
   z-index: 999;
 
-  /* escondido por padrão */
   opacity: 0;
   visibility: hidden;
   transform: translateY(10px);
@@ -227,16 +226,17 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
-/* Em telas muito pequenas, chega um pouco mais pra dentro */
+/* Em telas muito pequenas */
 @media (max-width: 600px) {
   .btn-topo {
-    right: 14px;
+    left: 14px;   /* aqui também, no lugar de right */
     bottom: 14px;
     width: 42px;
     height: 42px;
     font-size: 20px;
   }
 }
+
 
 #tabela-interacoes {
   width: 100%;
